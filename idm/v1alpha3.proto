@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package nghinhut.idm.v1alpha1;
+package nghinhut.idm.v1alpha3;
 
 import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
