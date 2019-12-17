@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package n13t.idm.v1alpha1;
+
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+import "idm/v1alpha1/user.proto";
+
+
+// gRPC Services
+service IdentityManagement {
+    rpc CreateUser(User) returns (google.protobuf.Empty) {}
+    rpc ListUsersStream(ListUsersRequest) returns (stream User) {}
+    rpc UpdateUser(User) returns (google.protobuf.Empty) {}
+    rpc DeleteUser(User) returns (google.protobuf.Empty) {}
+}
+
+message ListUsersRequest {
+    string search = 1;
+}
+
+message SearchRequest {
+    string query = 1;
+    int32 page_number = 2;
+    int32 result_per_page = 3;
+}
