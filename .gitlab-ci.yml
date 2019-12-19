@@ -9,3 +9,5 @@ release:
     - apk update && apk add git
     - npm install -g semantic-release @semantic-release/gitlab
     - semantic-release -r git@$CI_SERVER_HOST:$CI_PROJECT_PATH.git
+  except:
+    - tags
