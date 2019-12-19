@@ -1,0 +1,11 @@
+image: alpine:latest
+
+release:
+  image: node:12-alpine
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - apk update && apk add git
+    - npm install -g semantic-release @semantic-release/gitlab
+    - semantic-release -r git@gitlab.com:nghinhut/docs.git
