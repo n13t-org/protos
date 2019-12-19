@@ -5,7 +5,7 @@ for proto in $PROTOS; do
   proto=$(echo $proto | cut -d '/' -f2-)
   dirname=$(dirname $proto)
   filename=$(basename $proto)
-  printf "./scripts/protoc-all -i %s -f %s -l go -o pkg/apis/$dirname\n" $dirname $filename $outdir
-  eval $(printf "./scripts/protoc-all -i %s -f %s -l go -o pkg/apis/$dirname\n" $dirname $filename $outdir)
+  printf "./scripts/protoc-all -i %s -f %s -l go -o golang/$dirname\n" $dirname $filename $outdir
+  eval $(printf "./scripts/protoc-all -i %s -f %s -l go -o golang/$dirname\n" $dirname $filename $outdir)
 done
-sudo chown -R $USER pkg
+sudo chown -R $USER golang
