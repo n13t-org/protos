@@ -6,6 +6,11 @@ import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 
+/**
+ * Represents the user
+ *
+ * Compatible with OIDC (OpenID Connect)
+ */
 message User {
     bool enabled = 9;
     //    google.protobuf.Timestamp created_at = 101;     // ???
@@ -33,10 +38,14 @@ message User {
     string zoneinfo = 34;               // String from zoneinfo time zone database (the tz database) representing the End-User's time zone. For example, Europe/Paris or America/Los_Angeles.
     string locale = 35;                 // End-User's locale, represented as a BCP47 [RFC5646] language tag. This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA. As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well.
 
-    string phone_number = 40;           // see E.164/RFC3966
-                                        // E.164 example: +1 (425) 555-1212 or +56 (2) 687 2400
-                                        // RFC3966 example: +1 (604) 555-1234;ext=5678
-    bool phone_number_verified = 41;
+    /**
+     *  Ex: +1 (425) 555-1212 or +56 (2) 687 2400   (E.164)
+     *   or +1 (604) 555-1234;ext=5678              (RFC3966)
+     *  see E.164/RFC3966
+     */
+    string phone_number = 40;
+
+    bool phone_number_verified = 41;    // true if phone number is verified by issuer, default is false.
 
     // https://openid.net/specs/openid-connect-core-1_0.html#AddressClaim
     message Address {
@@ -48,7 +57,7 @@ message User {
         string country = 6;         // Country name component.
 
     }
-    Address address = 42;
+    Address address = 42;           // End-User's address
 
     google.protobuf.Timestamp updated_at = 102;     // 1970-01-01T00:00:00Z
 }

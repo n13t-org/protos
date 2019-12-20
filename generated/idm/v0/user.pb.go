@@ -23,6 +23,10 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
+//*
+// Represents the user
+//
+// Compatible with OIDC (OpenID Connect)
 type User struct {
 	Enabled bool `protobuf:"varint,9,opt,name=enabled,proto3" json:"enabled,omitempty"`
 	//    google.protobuf.Timestamp created_at = 101;     // ???
@@ -44,9 +48,11 @@ type User struct {
 	Birthdate         string `protobuf:"bytes,33,opt,name=birthdate,proto3" json:"birthdate,omitempty"`
 	Zoneinfo          string `protobuf:"bytes,34,opt,name=zoneinfo,proto3" json:"zoneinfo,omitempty"`
 	Locale            string `protobuf:"bytes,35,opt,name=locale,proto3" json:"locale,omitempty"`
-	PhoneNumber       string `protobuf:"bytes,40,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty"`
-	// E.164 example: +1 (425) 555-1212 or +56 (2) 687 2400
-	// RFC3966 example: +1 (604) 555-1234;ext=5678
+	//*
+	//  Ex: +1 (425) 555-1212 or +56 (2) 687 2400   (E.164)
+	//   or +1 (604) 555-1234;ext=5678              (RFC3966)
+	//  see E.164/RFC3966
+	PhoneNumber          string               `protobuf:"bytes,40,opt,name=phone_number,json=phoneNumber,proto3" json:"phone_number,omitempty"`
 	PhoneNumberVerified  bool                 `protobuf:"varint,41,opt,name=phone_number_verified,json=phoneNumberVerified,proto3" json:"phone_number_verified,omitempty"`
 	Address              *User_Address        `protobuf:"bytes,42,opt,name=address,proto3" json:"address,omitempty"`
 	UpdatedAt            *timestamp.Timestamp `protobuf:"bytes,102,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`

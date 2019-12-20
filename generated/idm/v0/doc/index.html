@@ -232,7 +232,7 @@
 
       
         <h3 id="n13t.idm.v0.User">User</h3>
-        <p></p>
+        <p>Represents the user</p><p>Compatible with OIDC (OpenID Connect)</p>
 
         
           <table class="field-table">
@@ -373,22 +373,23 @@ Subject - Identifier for the End-User at the Issuer. </p></td>
                   <td>phone_number</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>see E.164/RFC3966 </p></td>
+                  <td><p>Ex: &#43;1 (425) 555-1212 or &#43;56 (2) 687 2400   (E.164)
+  or &#43;1 (604) 555-1234;ext=5678              (RFC3966)
+ see E.164/RFC3966 </p></td>
                 </tr>
               
                 <tr>
                   <td>phone_number_verified</td>
                   <td><a href="#bool">bool</a></td>
                   <td></td>
-                  <td><p>E.164 example: &#43;1 (425) 555-1212 or &#43;56 (2) 687 2400
-RFC3966 example: &#43;1 (604) 555-1234;ext=5678 </p></td>
+                  <td><p>true if phone number is verified by issuer, default is false. </p></td>
                 </tr>
               
                 <tr>
                   <td>address</td>
                   <td><a href="#n13t.idm.v0.User.Address">User.Address</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>End-User&#39;s address </p></td>
                 </tr>
               
                 <tr>
@@ -578,7 +579,7 @@ RFC3966 example: &#43;1 (604) 555-1234;ext=5678 </p></td>
 
       
         <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
-        <p>gRPC Services</p>
+        <p>Identity Management Service - manage user's private information</p>
         <table class="enum-table">
           <thead>
             <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
@@ -596,7 +597,7 @@ RFC3966 example: &#43;1 (604) 555-1234;ext=5678 </p></td>
                 <td>ListUsersStream</td>
                 <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
                 <td><a href="#n13t.idm.v0.User">User</a> stream</td>
-                <td><p></p></td>
+                <td><p>the default rpc use for listing users</p></td>
               </tr>
             
               <tr>

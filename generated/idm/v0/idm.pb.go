@@ -164,6 +164,7 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type IdentityManagementClient interface {
 	CreateUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*empty.Empty, error)
+	/// the default rpc use for listing users
 	ListUsersStream(ctx context.Context, in *ListUsersRequest, opts ...grpc.CallOption) (IdentityManagement_ListUsersStreamClient, error)
 	UpdateUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*empty.Empty, error)
 	DeleteUser(ctx context.Context, in *User, opts ...grpc.CallOption) (*empty.Empty, error)
@@ -239,6 +240,7 @@ func (c *identityManagementClient) DeleteUser(ctx context.Context, in *User, opt
 // IdentityManagementServer is the server API for IdentityManagement service.
 type IdentityManagementServer interface {
 	CreateUser(context.Context, *User) (*empty.Empty, error)
+	/// the default rpc use for listing users
 	ListUsersStream(*ListUsersRequest, IdentityManagement_ListUsersStreamServer) error
 	UpdateUser(context.Context, *User) (*empty.Empty, error)
 	DeleteUser(context.Context, *User) (*empty.Empty, error)

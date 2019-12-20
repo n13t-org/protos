@@ -8,9 +8,12 @@ import "google/protobuf/timestamp.proto";
 import "user.proto";
 
 
-// gRPC Services
+/**
+ * Identity Management Service - manage user's private information
+ */
 service IdentityManagement {
     rpc CreateUser(User) returns (google.protobuf.Empty) {}
+    /// the default rpc use for listing users
     rpc ListUsersStream(ListUsersRequest) returns (stream User) {}
     rpc UpdateUser(User) returns (google.protobuf.Empty) {}
     rpc DeleteUser(User) returns (google.protobuf.Empty) {}
