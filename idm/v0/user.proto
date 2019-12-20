@@ -38,14 +38,14 @@ message User {
     string website = 22;                // URL
 
     // RFC5322  (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability)
-    string email = 30;
+    string email = 30 [(validate.rules).string.pattern = "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"];
     bool email_verified = 31;
 
     string gender = 32;                 // male | female
     // ISO 8601:2004 YYYY-MM-DD format. The year MAY be 0000, indicating that it is omitted. To represent only the year, YYYY format is allowed.
     string birthdate = 33;
     // String from zoneinfo time zone database (the tz database) representing the End-User's time zone. For example, Europe/Paris or America/Los_Angeles.
-    string zoneinfo = 34;
+    string zoneinfo = 34 [(validate.rules).string.pattern = "^\\w+(/\\w+){1,2}([-|+][0-9]{1,2})?$"];
     // End-User's locale, represented as a BCP47 [RFC5646] language tag.
     // This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA.
     // As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well.

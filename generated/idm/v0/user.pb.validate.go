@@ -82,7 +82,12 @@ func (m *User) Validate() error {
 
 	// no validation rules for Website
 
-	// no validation rules for Email
+	if !_User_Email_Pattern.MatchString(m.GetEmail()) {
+		return UserValidationError{
+			field:  "Email",
+			reason: "value does not match regex pattern \"^\\\\w+([-+.']\\\\w+)*@\\\\w+([-.]\\\\w+)*\\\\.\\\\w+([-.]\\\\w+)*$\"",
+		}
+	}
 
 	// no validation rules for EmailVerified
 
@@ -90,7 +95,12 @@ func (m *User) Validate() error {
 
 	// no validation rules for Birthdate
 
-	// no validation rules for Zoneinfo
+	if !_User_Zoneinfo_Pattern.MatchString(m.GetZoneinfo()) {
+		return UserValidationError{
+			field:  "Zoneinfo",
+			reason: "value does not match regex pattern \"^\\\\w+(/\\\\w+){1,2}([-|+][0-9]{1,2})?$\"",
+		}
+	}
 
 	// no validation rules for Locale
 
@@ -171,6 +181,10 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = UserValidationError{}
+
+var _User_Email_Pattern = regexp.MustCompile("^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$")
+
+var _User_Zoneinfo_Pattern = regexp.MustCompile("^\\w+(/\\w+){1,2}([-|+][0-9]{1,2})?$")
 
 // Validate checks the field values on User_Address with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
