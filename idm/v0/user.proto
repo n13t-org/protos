@@ -19,16 +19,22 @@ message User {
     // OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
     // Subject - Identifier for the End-User at the Issuer.
     string sub = 10 ;
+
     // End-User's full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the End-User's locale and preferences.
     string name = 11;
+
     // Given name(s) or first name(s) of the End-User.
     string given_name = 12;
+
     // Surname(s) or last name(s) of the End-User
     string family_name = 14;
+
     // Middle name(s) of the End-User
     string middle_name = 15;
+
     // Casual name of the End-User
     string nickname = 16;
+
     // Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe.
     // This value MAY be any valid JSON string including special characters such as @, /, or whitespace (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability)
     string preferred_username = 17;
@@ -42,14 +48,18 @@ message User {
     bool email_verified = 31;
 
     string gender = 32;                 // male | female
+
     // ISO 8601:2004 YYYY-MM-DD format. The year MAY be 0000, indicating that it is omitted. To represent only the year, YYYY format is allowed.
     string birthdate = 33;
+
     // String from zoneinfo time zone database (the tz database) representing the End-User's time zone. For example, Europe/Paris or America/Los_Angeles.
     string zoneinfo = 34 [(validate.rules).string.pattern = "^\\w+(/\\w+){1,2}([-|+][0-9]{1,2})?$"];
+
     // End-User's locale, represented as a BCP47 [RFC5646] language tag.
     // This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA.
     // As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well.
     string locale = 35;
+
     // Ex: +1 (425) 555-1212 or +56 (2) 687 2400   (E.164)
     //  or +1 (604) 555-1234;ext=5678              (RFC3966)
     // see E.164/RFC3966
