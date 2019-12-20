@@ -9,7 +9,7 @@ dir=$(find . -name 'v[0-9]*' -not -path "*.git/*")
 for d in $dir; do
   d=$(echo $d | cut -d '/' -f2-)
   printf "Generating code in $d, output: $OUTPUT_DIR/$d\n"
-  eval $(printf "./scripts/protoc-all -d $d -l go --with-docs -o $OUTPUT_DIR/$d\n")
+  eval $(printf "./scripts/protoc-all -d $d -l go --lint --with-validator --with-gateway --with-docs -o $OUTPUT_DIR/$d\n")
 done
 
 # gen file by file

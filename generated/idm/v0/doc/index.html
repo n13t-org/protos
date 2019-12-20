@@ -260,7 +260,6 @@
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p>OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
-
 Subject - Identifier for the End-User at the Issuer. </p></td>
                 </tr>
               
@@ -303,7 +302,8 @@ Subject - Identifier for the End-User at the Issuer. </p></td>
                   <td>preferred_username</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe. </p></td>
+                  <td><p>Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe.
+This value MAY be any valid JSON string including special characters such as @, /, or whitespace (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability) </p></td>
                 </tr>
               
                 <tr>
@@ -366,7 +366,9 @@ Subject - Identifier for the End-User at the Issuer. </p></td>
                   <td>locale</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p>End-User&#39;s locale, represented as a BCP47 [RFC5646] language tag. This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA. As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well. </p></td>
+                  <td><p>End-User&#39;s locale, represented as a BCP47 [RFC5646] language tag.
+This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA.
+As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well. </p></td>
                 </tr>
               
                 <tr>
@@ -374,8 +376,8 @@ Subject - Identifier for the End-User at the Issuer. </p></td>
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p>Ex: &#43;1 (425) 555-1212 or &#43;56 (2) 687 2400   (E.164)
-  or &#43;1 (604) 555-1234;ext=5678              (RFC3966)
- see E.164/RFC3966 </p></td>
+ or &#43;1 (604) 555-1234;ext=5678              (RFC3966)
+see E.164/RFC3966 </p></td>
                 </tr>
               
                 <tr>
@@ -617,6 +619,64 @@ Subject - Identifier for the End-User at the Issuer. </p></td>
           </tbody>
         </table>
 
+        
+          
+          
+          <h4>Methods with HTTP bindings</h4>
+          <table>
+            <thead>
+              <tr>
+                <td>Method Name</td>
+                <td>Method</td>
+                <td>Pattern</td>
+                <td>Body</td>
+              </tr>
+            </thead>
+            <tbody>
+            
+              
+              
+              <tr>
+                <td>CreateUser</td>
+                <td>POST</td>
+                <td>/v0/users</td>
+                <td>*</td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>ListUsersStream</td>
+                <td>GET</td>
+                <td>/v0/users</td>
+                <td></td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>UpdateUser</td>
+                <td>PUT</td>
+                <td>/v0/users/{sub}</td>
+                <td>*</td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>DeleteUser</td>
+                <td>DELETE</td>
+                <td>/v0/users/{sub}</td>
+                <td></td>
+              </tr>
+              
+            
+            </tbody>
+          </table>
+          
         
     
 

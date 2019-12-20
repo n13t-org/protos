@@ -2,9 +2,8 @@ syntax = "proto3";
 
 package n13t.idm.v0;
 
-import "google/protobuf/any.proto";
+import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
 import "user.proto";
 
 
@@ -12,11 +11,29 @@ import "user.proto";
  * Identity Management Service - manage user's private information
  */
 service IdentityManagement {
-    rpc CreateUser(User) returns (google.protobuf.Empty) {}
+    rpc CreateUser(User) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+			post: "/v0/users"
+			body: "*"
+		};
+    }
     /// the default rpc use for listing users
-    rpc ListUsersStream(ListUsersRequest) returns (stream User) {}
-    rpc UpdateUser(User) returns (google.protobuf.Empty) {}
-    rpc DeleteUser(User) returns (google.protobuf.Empty) {}
+    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
+        option (google.api.http) = {
+			get: "/v0/users"
+		};
+    }
+    rpc UpdateUser(User) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+			put: "/v0/users/{sub}"
+			body: "*"
+		};
+    }
+    rpc DeleteUser(User) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
+			delete: "/v0/users/{sub}"
+		};
+    }
 }
 
 message ListUsersRequest {

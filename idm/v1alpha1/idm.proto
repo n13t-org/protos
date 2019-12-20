@@ -2,9 +2,7 @@ syntax = "proto3";
 
 package n13t.idm.v1alpha1;
 
-import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/timestamp.proto";
 import "user.proto";
 
 
