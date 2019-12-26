@@ -11,6 +11,31 @@
     "application/json"
   ],
   "paths": {
+    "/v0/health": {
+      "get": {
+        "summary": "https://github.com/grpc/grpc/blob/master/doc/health-checking.md",
+        "operationId": "Check",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v0HealthCheckResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "service",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "IdentityManagement"
+        ]
+      }
+    },
     "/v0/users": {
       "get": {
         "summary": "/ the default rpc use for listing users",
@@ -283,6 +308,15 @@
     }
   },
   "definitions": {
+    "HealthCheckResponseServingStatus": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "SERVING",
+        "NOT_SERVING"
+      ],
+      "default": "UNKNOWN"
+    },
     "UserAddress": {
       "type": "object",
       "properties": {
@@ -344,6 +378,14 @@
           "items": {
             "$ref": "#/definitions/protobufAny"
           }
+        }
+      }
+    },
+    "v0HealthCheckResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/HealthCheckResponseServingStatus"
         }
       }
     },
@@ -442,6 +484,18 @@
     }
   },
   "x-stream-definitions": {
+    "v0HealthCheckResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/v0HealthCheckResponse"
+        },
+        "error": {
+          "$ref": "#/definitions/runtimeStreamError"
+        }
+      },
+      "title": "Stream result of v0HealthCheckResponse"
+    },
     "v0User": {
       "type": "object",
       "properties": {

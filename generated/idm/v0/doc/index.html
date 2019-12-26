@@ -175,6 +175,41 @@
         
           
           <li>
+            <a href="#idm.proto">idm.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckRequest"><span class="badge">M</span>HealthCheckRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckResponse"><span class="badge">M</span>HealthCheckResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
+                </li>
+              
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus"><span class="badge">E</span>HealthCheckResponse.ServingStatus</a>
+                </li>
+              
+              
+              
+                <li>
+                  <a href="#n13t.idm.v0.IdentityManagement"><span class="badge">S</span>IdentityManagement</a>
+                </li>
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#user.proto">user.proto</a>
             <ul>
               
@@ -196,33 +231,285 @@
             </ul>
           </li>
         
-          
-          <li>
-            <a href="#idm.proto">idm.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
-                </li>
-              
-              
-              
-              
-                <li>
-                  <a href="#n13t.idm.v0.IdentityManagement"><span class="badge">S</span>IdentityManagement</a>
-                </li>
-              
-            </ul>
-          </li>
-        
         <li><a href="#scalar-value-types">Scalar Value Types</a></li>
       </ul>
     </div>
 
+    
+      
+      <div class="file-heading">
+        <h2 id="idm.proto">idm.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>service</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>search</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>query</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>page_number</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>result_per_page</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>UNKNOWN</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SERVING</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NOT_SERVING</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
+        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
+        <p>Identity Management Service - manage user's private information</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>CreateUser</td>
+                <td><a href="#n13t.idm.v0.User">User</a></td>
+                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>ListUsersStream</td>
+                <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
+                <td><a href="#n13t.idm.v0.User">User</a> stream</td>
+                <td><p>the default rpc use for listing users</p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateUser</td>
+                <td><a href="#n13t.idm.v0.User">User</a></td>
+                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>DeleteUser</td>
+                <td><a href="#n13t.idm.v0.User">User</a></td>
+                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>Check</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
+                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md</p></td>
+              </tr>
+            
+              <tr>
+                <td>Watch</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a> stream</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+
+        
+          
+          
+          <h4>Methods with HTTP bindings</h4>
+          <table>
+            <thead>
+              <tr>
+                <td>Method Name</td>
+                <td>Method</td>
+                <td>Pattern</td>
+                <td>Body</td>
+              </tr>
+            </thead>
+            <tbody>
+            
+              
+              
+              <tr>
+                <td>CreateUser</td>
+                <td>POST</td>
+                <td>/v0/users</td>
+                <td>*</td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>ListUsersStream</td>
+                <td>GET</td>
+                <td>/v0/users</td>
+                <td></td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>UpdateUser</td>
+                <td>PUT</td>
+                <td>/v0/users/{sub}</td>
+                <td>*</td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>DeleteUser</td>
+                <td>DELETE</td>
+                <td>/v0/users/{sub}</td>
+                <td></td>
+              </tr>
+              
+            
+              
+              
+              <tr>
+                <td>Check</td>
+                <td>GET</td>
+                <td>/v0/health</td>
+                <td></td>
+              </tr>
+              
+            
+            </tbody>
+          </table>
+          
+        
     
       
       <div class="file-heading">
@@ -504,180 +791,6 @@ see E.164/RFC3966 </p></td>
       
 
       
-    
-      
-      <div class="file-heading">
-        <h2 id="idm.proto">idm.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>search</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>query</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>page_number</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>result_per_page</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
-        <p>Identity Management Service - manage user's private information</p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>CreateUser</td>
-                <td><a href="#n13t.idm.v0.User">User</a></td>
-                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>ListUsersStream</td>
-                <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
-                <td><a href="#n13t.idm.v0.User">User</a> stream</td>
-                <td><p>the default rpc use for listing users</p></td>
-              </tr>
-            
-              <tr>
-                <td>UpdateUser</td>
-                <td><a href="#n13t.idm.v0.User">User</a></td>
-                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>DeleteUser</td>
-                <td><a href="#n13t.idm.v0.User">User</a></td>
-                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-
-        
-          
-          
-          <h4>Methods with HTTP bindings</h4>
-          <table>
-            <thead>
-              <tr>
-                <td>Method Name</td>
-                <td>Method</td>
-                <td>Pattern</td>
-                <td>Body</td>
-              </tr>
-            </thead>
-            <tbody>
-            
-              
-              
-              <tr>
-                <td>CreateUser</td>
-                <td>POST</td>
-                <td>/v0/users</td>
-                <td>*</td>
-              </tr>
-              
-            
-              
-              
-              <tr>
-                <td>ListUsersStream</td>
-                <td>GET</td>
-                <td>/v0/users</td>
-                <td></td>
-              </tr>
-              
-            
-              
-              
-              <tr>
-                <td>UpdateUser</td>
-                <td>PUT</td>
-                <td>/v0/users/{sub}</td>
-                <td>*</td>
-              </tr>
-              
-            
-              
-              
-              <tr>
-                <td>DeleteUser</td>
-                <td>DELETE</td>
-                <td>/v0/users/{sub}</td>
-                <td></td>
-              </tr>
-              
-            
-            </tbody>
-          </table>
-          
-        
     
 
     <h2 id="scalar-value-types">Scalar Value Types</h2>
