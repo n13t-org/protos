@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package n13t.devops.v0;
+
+service DevOps {
+    rpc WebHook(WebHookRequest) returns (WebHookResponse);
+}
+
+message WebHookRequest {
+    string message = 1;
+}
+
+message WebHookResponse {
+    string message = 1;
+}
+
