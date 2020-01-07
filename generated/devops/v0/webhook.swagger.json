@@ -11,5 +11,30 @@
     "application/json"
   ],
   "paths": {},
-  "definitions": {}
+  "definitions": {
+    "v4Author": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "username": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "state": {
+          "type": "string"
+        },
+        "avatar_url": {
+          "type": "string"
+        },
+        "web_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
 }

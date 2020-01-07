@@ -57,6 +57,28 @@ func (m *Event) Validate() error {
 		}
 	}
 
+	// no validation rules for Title
+
+	// no validation rules for ProjectId
+
+	// no validation rules for TargetId
+
+	// no validation rules for AuthorId
+
+	// no validation rules for TargetTitle
+
+	if v, ok := interface{}(m.GetAuthor()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return EventValidationError{
+				field:  "Author",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	// no validation rules for AuthorUsername
+
 	return nil
 }
 
@@ -117,3 +139,101 @@ var _ interface {
 var _Event_ActionName_Pattern = regexp.MustCompile("^(created|updated|closed|reopened|pushed|commented|merged|joined|left|destroyed|expired)$")
 
 var _Event_TargetType_Pattern = regexp.MustCompile("^(issue|milestone|merge_request|note|project|snippet|user|)$")
+
+// Validate checks the field values on Author with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *Author) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Name
+
+	// no validation rules for Username
+
+	// no validation rules for Id
+
+	// no validation rules for State
+
+	if uri, err := url.Parse(m.GetAvatarUrl()); err != nil {
+		return AuthorValidationError{
+			field:  "AvatarUrl",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return AuthorValidationError{
+			field:  "AvatarUrl",
+			reason: "value must be absolute",
+		}
+	}
+
+	if uri, err := url.Parse(m.GetWebUrl()); err != nil {
+		return AuthorValidationError{
+			field:  "WebUrl",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return AuthorValidationError{
+			field:  "WebUrl",
+			reason: "value must be absolute",
+		}
+	}
+
+	return nil
+}
+
+// AuthorValidationError is the validation error returned by Author.Validate if
+// the designated constraints aren't met.
+type AuthorValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e AuthorValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e AuthorValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e AuthorValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e AuthorValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e AuthorValidationError) ErrorName() string { return "AuthorValidationError" }
+
+// Error satisfies the builtin error interface
+func (e AuthorValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sAuthor.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = AuthorValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = AuthorValidationError{}

@@ -12,4 +12,16 @@ message Event {
     uint32 project_id = 4;
     uint32 target_id = 5;
     uint32 author_id = 6;
+    string target_title = 7;
+    Author author = 8;
+    string author_username = 9;
+}
+
+message Author {
+    string name = 1;
+    string username = 2;
+    uint32 id = 3;
+    string state = 4;
+    string avatar_url = 5 [(validate.rules).string.uri = true];
+    string web_url = 6 [(validate.rules).string.uri = true];
 }
