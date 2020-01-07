@@ -43,9 +43,9 @@ func (m *Event) Validate() error {
 		return nil
 	}
 
-	if _, ok := _Event_Action_InLookup[m.GetAction()]; !ok {
+	if _, ok := _Event_ActionName_InLookup[m.GetActionName()]; !ok {
 		return EventValidationError{
-			field:  "Action",
+			field:  "ActionName",
 			reason: "value must be in list [created updated closed reopened pushed commented merged joined left destroyed expired]",
 		}
 	}
@@ -114,7 +114,7 @@ var _ interface {
 	ErrorName() string
 } = EventValidationError{}
 
-var _Event_Action_InLookup = map[string]struct{}{
+var _Event_ActionName_InLookup = map[string]struct{}{
 	"created":   {},
 	"updated":   {},
 	"closed":    {},

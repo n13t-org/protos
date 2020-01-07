@@ -6,7 +6,7 @@ import "validate/validate.proto";
 
 // See https://docs.gitlab.com/ee/api/events.html
 message Event {
-    string action = 1 [(validate.rules).string = {in: ["created", "updated", "closed", "reopened", "pushed", "commented"
+    string action_name = 1 [(validate.rules).string = {in: ["created", "updated", "closed", "reopened", "pushed", "commented"
                                                                 , "merged", "joined", "left", "destroyed", "expired"]}];
 
     string target_type = 2 [(validate.rules).string = {in: ["issue", "milestone", "merge_request", "note"
