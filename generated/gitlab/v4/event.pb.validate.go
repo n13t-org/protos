@@ -43,17 +43,17 @@ func (m *Event) Validate() error {
 		return nil
 	}
 
-	if _, ok := _Event_ActionName_InLookup[m.GetActionName()]; !ok {
+	if !_Event_ActionName_Pattern.MatchString(m.GetActionName()) {
 		return EventValidationError{
 			field:  "ActionName",
-			reason: "value must be in list [created updated closed reopened pushed commented merged joined left destroyed expired]",
+			reason: "value does not match regex pattern \"^(created|updated|closed|reopened|pushed|commented|merged|joined|left|destroyed|expired)$\"",
 		}
 	}
 
-	if _, ok := _Event_TargetType_InLookup[m.GetTargetType()]; !ok {
+	if !_Event_TargetType_Pattern.MatchString(m.GetTargetType()) {
 		return EventValidationError{
 			field:  "TargetType",
-			reason: "value must be in list [issue milestone merge_request note project snippet user]",
+			reason: "value does not match regex pattern \"^(issue|milestone|merge_request|note|project|snippet|user|)$\"",
 		}
 	}
 
@@ -114,26 +114,6 @@ var _ interface {
 	ErrorName() string
 } = EventValidationError{}
 
-var _Event_ActionName_InLookup = map[string]struct{}{
-	"created":   {},
-	"updated":   {},
-	"closed":    {},
-	"reopened":  {},
-	"pushed":    {},
-	"commented": {},
-	"merged":    {},
-	"joined":    {},
-	"left":      {},
-	"destroyed": {},
-	"expired":   {},
-}
+var _Event_ActionName_Pattern = regexp.MustCompile("^(created|updated|closed|reopened|pushed|commented|merged|joined|left|destroyed|expired)$")
 
-var _Event_TargetType_InLookup = map[string]struct{}{
-	"issue":         {},
-	"milestone":     {},
-	"merge_request": {},
-	"note":          {},
-	"project":       {},
-	"snippet":       {},
-	"user":          {},
-}
+var _Event_TargetType_Pattern = regexp.MustCompile("^(issue|milestone|merge_request|note|project|snippet|user|)$")
