@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 PROTOS=$(find . -iname '*.proto')
 OUTPUT_DIR="generated"
 
