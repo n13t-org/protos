@@ -13,8 +13,8 @@ dir=$(find . -name 'v[0-9]*' -not -path "*.git/*" | grep -v 'gen')
 for d in $dir; do
   d=$(echo $d | cut -d '/' -f2-)
   printf "Generating code in $d, output: $OUTPUT_DIR/n13t/$d\n"
-  eval $(printf "./scripts/protoc-all -d /opt/include/n13t/$d -l go  --go-package-map --lint --with-validator --with-gateway --with-docs -o $OUTPUT_DIR\n")
-  eval $(printf "./scripts/protoc-all -d /opt/include/n13t/$d -l descriptor_set -o $OUTPUT_DIR/n13t/$d\n")
+  eval $(printf "./scripts/protoc-all -d /opt/include/n13t/$d -l go --lint --with-validator --with-gateway  -o $OUTPUT_DIR\n")
+  eval $(printf "./scripts/protoc-all -d /opt/include/n13t/$d -l descriptor_set --with-docs -o $OUTPUT_DIR/n13t/$d\n")
 #  mv /opt/include/n13t/$d
 done
 
