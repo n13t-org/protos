@@ -4,7 +4,7 @@ package n13t.idm.v0;
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "user.proto";
+import "n13t/idm/v0/user.proto";
 
 
 /**

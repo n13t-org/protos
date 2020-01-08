@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package n13t.gitlab.v4;
+
+import "validate/validate.proto";
+
+message Author {
+    string name = 1;
+    string email = 2;
+//    {
+//        "name": "GitLab dev user",
+//        "email": "gitlabdev@dv6700.(none)"
+//      },
+}
