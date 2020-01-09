@@ -66,3 +66,7 @@ string x = 1 [(validate.rules).string.uri_ref = true];
 // x must be a valid UUID (via RFC 4122)
 string x = 1 [(validate.rules).string.uuid = true];
 ```
+
+## NOTES
+- Auto generated stubs only support for Golang. 
+> If you use other languages you may want to clone this repo and gen stubs yourself or fork then build with CI, etc.
