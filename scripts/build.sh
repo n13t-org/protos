@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-PROTOS=$(find . -iname '*.proto')
+#PROTOS=$(find . -iname '*.proto')
 OUTPUT_DIR="gen"
 
 rm -rf $OUTPUT_DIR
 # gen by dir
-dir=$(find . -name 'v[0-9]*' -not -path "*.git/*" | grep -v 'gen')
+dir=$(find . -name 'v[0-9]*' -not -path "*.git/*" | grep -v 'gen' | grep -v 'test')
 
 #eval $(printf "./scripts/protoc-all -d /opt/include/n13t/idm/v0 -l go --lint --with-validator --with-gateway --with-docs -o /defs/$OUTPUT_DIR/$d\n")
 #eval $(printf "./scripts/protoc-all -d ./ -l descriptor_set -o $OUTPUT_DIR/$d\n")
