@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 PROTOS=$(find . -iname '*.proto')
-OUTPUT_DIR="generated"
+OUTPUT_DIR="gen"
 
 rm -rf $OUTPUT_DIR
 # gen by dir
