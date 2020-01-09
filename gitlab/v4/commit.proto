@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package n13t.gitlab.v4;
+
+import "validate/validate.proto";
+import "n13t/gitlab/v4/author.proto";
+
+message Commit {
+    string id = 1;
+    string message = 2;
+    string timestamp = 3;
+    string url = 4 [(validate.rules).string.uri = true];
+    Author author = 5;
+    repeated string added = 6;
+    repeated string modified = 7;
+    repeated string removed = 8;
+
+//    "id": "b6568db1bc1dcd7f8b4d5a946b0b91f9dacd7327",
+//      "message": "Update Catalan translation to e38cb41.",
+//      "timestamp": "2011-12-12T14:27:31+02:00",
+//      "url": "http://example.com/mike/diaspora/commit/b6568db1bc1dcd7f8b4d5a946b0b91f9dacd7327",
+//      "author": {
+//        "name": "Jordi Mallach",
+//        "email": "jordi@softcatala.org"
+//      },
+//      "added": ["CHANGELOG"],
+//      "modified": ["app/controller/application.rb"],
+//      "removed": []
+}

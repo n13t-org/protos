@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package n13t.devops.v0;
 
-import "gitlab/v4/event.proto";
+import "n13t/gitlab/v4/webhook-event.proto";
 import "google/protobuf/empty.proto";
 
 service DevOps {
-    rpc WebHook(n13t.gitlab.v4.Event) returns (google.protobuf.Empty);
+    rpc WebHook(n13t.gitlab.v4.WebhookEvent) returns (google.protobuf.Empty);
 }

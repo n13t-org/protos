@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package n13t.gitlab.v4;
+
+import "validate/validate.proto";
+
+message Project {
+    uint32 id = 1;
+    string name = 2;
+    string description = 3;
+    string web_url = 4 [(validate.rules).string.uri = true];
+    string avatar_url = 5 [(validate.rules).string.uri = true];
+    string git_ssh_url = 6 [(validate.rules).string.uri = true];
+    string git_http_url = 7 [(validate.rules).string.uri = true];
+    string namespace = 8;
+    uint32 visibility_level = 9;
+    string path_with_namespace = 10;
+    string default_branch = 11;
+    string homepage = 12 [(validate.rules).string.uri = true];
+    string url = 13 [(validate.rules).string.uri = true];
+    string ssh_url = 14 [(validate.rules).string.uri = true];
+    string http_url = 15 [(validate.rules).string.uri = true];
+
+
+
+//    "id": 15,
+//    "name":"Diaspora",
+//    "description":"",
+//    "web_url":"http://example.com/mike/diaspora",
+//    "avatar_url":null,
+//    "git_ssh_url":"git@example.com:mike/diaspora.git",
+//    "git_http_url":"http://example.com/mike/diaspora.git",
+//    "namespace":"Mike",
+//    "visibility_level":0,
+//    "path_with_namespace":"mike/diaspora",
+//    "default_branch":"master",
+//    "homepage":"http://example.com/mike/diaspora",
+//    "url":"git@example.com:mike/diaspora.git",
+//    "ssh_url":"git@example.com:mike/diaspora.git",
+//    "http_url":"http://example.com/mike/diaspora.git"
+}

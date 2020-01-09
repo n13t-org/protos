@@ -1,1 +1,7 @@
-docker run --rm -v `pwd`:/defs --entrypoint /defs/scripts/entrypoint.sh namely/protoc-all $@
+#!/usr/bin/env sh
+
+docker run --rm -v `pwd`:/opt/include/n13t -w /opt/include/n13t namely/protoc-all $@
+
+
+# Deprecated
+# docker run --rm -it -v `pwd`:/opt/include/n13t  --entrypoint /defs/scripts/entrypoint.sh namely/protoc-all $@

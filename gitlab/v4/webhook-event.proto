@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package n13t.gitlab.v4;
+
+
+import "validate/validate.proto";
+import "n13t/gitlab/v4/author.proto";
+
+// See https://docs.gitlab.com/ee/api/events.html
+message WebhookEvent {
+    string object_kind = 1 [(validate.rules).string.pattern = "^(push|tag_push|issue|note|merge_request|wiki_page|pipeline|build)$"];
+    n13t.gitlab.v4.Author author = 2;
+
+//    "before": "95790bf891e76fee5e1747ab589903a6a1f80f22",
+//  "after": "da1560886d4f094c3e6c9ef40349f7d38b5d27d7",
+//  "ref": "refs/heads/master",
+//  "checkout_sha": "da1560886d4f094c3e6c9ef40349f7d38b5d27d7",
+//  "user_id": 4,
+//  "user_name": "John Smith",
+//  "user_username": "jsmith",
+//  "user_email": "john@example.com",
+//  "user_avatar": "https://s.gravatar.com/avatar/d4c74594d841139328695756648b6bd6?s=8://s.gravatar.com/avatar/d4c74594d841139328695756648b6bd6?s=80",
+//  "project_id": 15,
+
+
+//    string action_name = 1 [(validate.rules).string.pattern = "^(created|updated|closed|reopened|pushed|commented|merged|joined|left|destroyed|expired)$"];
+//    string target_type = 2 [(validate.rules).string.pattern = "^(issue|milestone|merge_request|note|project|snippet|user|)$"];
+//    string title = 3;
+//    uint32 project_id = 4;
+//    uint32 target_id = 5;
+//    uint32 author_id = 6;
+//    string target_title = 7;
+//    n13t.gitlab.v4.Author author = 8;
+//    string author_username = 9;
+}
+
+//message Author {
+//    string name = 1;
+//    string username = 2;
+//    uint32 id = 3;
+//    string state = 4;
+//    string avatar_url = 5 [(validate.rules).string.uri = true];
+//    string web_url = 6 [(validate.rules).string.uri = true];
+//}

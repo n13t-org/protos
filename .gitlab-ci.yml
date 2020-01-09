@@ -4,10 +4,12 @@ release:
   image: node:12-alpine
   cache:
     paths:
-      - node_modules/
+      - node_modules
   script:
     - apk update && apk add git
-    - npm install -g semantic-release @semantic-release/gitlab
-    - semantic-release -r git@$CI_SERVER_HOST:$CI_PROJECT_PATH.git
+    - |
+      echo '{"devDependencies": { "@semantic-release/gitlab": "^4.1.0", "semantic-release": "^15.14.0" }}' > package.json && npm install
+      ./node_modules/.bin/semantic-release -r git@$CI_SERVER_HOST:$CI_PROJECT_PATH.git
+#    - npm install -g semantic-release @semantic-release/gitlab
   except:
     - tags
