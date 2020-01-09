@@ -1,4 +1,18 @@
 
+# Usage
+```go
+import (
+    ...
+    gitlab "gitlab.com/n13t/protos/pkg/n13t/gitlab/v4"
+    ...
+)
+```
+
+- Auto generated stubs only support for Golang. 
+> If you use other languages you may want to clone this repo and gen stubs yourself or fork then build with CI, etc.
+
+
+
 # [protoc-gen-validate (PGV)](https://github.com/envoyproxy/protoc-gen-validate)
 ```
 syntax = "proto3";
@@ -66,7 +80,3 @@ string x = 1 [(validate.rules).string.uri_ref = true];
 // x must be a valid UUID (via RFC 4122)
 string x = 1 [(validate.rules).string.uuid = true];
 ```
-
-## NOTES
-- Auto generated stubs only support for Golang. 
-> If you use other languages you may want to clone this repo and gen stubs yourself or fork then build with CI, etc.
