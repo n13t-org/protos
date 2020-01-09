@@ -1,1 +1,1 @@
-docker run --rm -it -v `pwd`:/defs --entrypoint /defs/scripts/entrypoint.sh namely/protoc-all $@
+docker run --rm -v `pwd`:/defs --entrypoint /defs/scripts/entrypoint.sh namely/protoc-all $@
