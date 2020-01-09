@@ -1,4 +1,4 @@
 #!/bin/sh
 
-./scripts/build.sh
+OUTPUT_DIR=gen ./scripts/build.sh
 
