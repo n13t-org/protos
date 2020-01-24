@@ -17,7 +17,7 @@ service IdentityManagement {
     // Concatenates two strings
     rpc Concat (ConcatRequest) returns (ConcatReply) {}
 
-    rpc CreateUser(User) returns (google.protobuf.Empty) {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
         option (google.api.http) = {
 			post: "/v0/users"
 			body: "*"
@@ -48,6 +48,14 @@ service IdentityManagement {
 		};
     };
 //    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
+}
+
+message CreateUserRequest {
+    User user = 1;
+}
+
+message CreateUserResponse {
+
 }
 
 message HealthCheckRequest {

@@ -43,7 +43,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "properties": {}
+              "$ref": "#/definitions/v0CreateUserResponse"
             }
           }
         },
@@ -53,7 +53,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/v0User"
+              "$ref": "#/definitions/v0CreateUserRequest"
             }
           }
         ],
@@ -123,6 +123,17 @@
         }
       },
       "description": "The Concat response contains the result of the concatenation."
+    },
+    "v0CreateUserRequest": {
+      "type": "object",
+      "properties": {
+        "user": {
+          "$ref": "#/definitions/v0User"
+        }
+      }
+    },
+    "v0CreateUserResponse": {
+      "type": "object"
     },
     "v0HealthCheckResponse": {
       "type": "object",
