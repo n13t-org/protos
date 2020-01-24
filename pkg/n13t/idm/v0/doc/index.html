@@ -839,25 +839,6 @@ see E.164/RFC3966 </p></td>
               </tr>
             
               <tr>
-                <td>UpdateUser</td>
-                <td><a href="#n13t.idm.v0.User">User</a></td>
-                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
-                <td><p>the default rpc use for listing users
-   rpc ListUsersStream(ListUsersRequest) returns (stream User) {
-       option (google.api.http) = {
-			get: &#34;/v0/users&#34;
-		};
-   }</p></td>
-              </tr>
-            
-              <tr>
-                <td>DeleteUser</td>
-                <td><a href="#n13t.idm.v0.User">User</a></td>
-                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
                 <td>Check</td>
                 <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
                 <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
@@ -896,26 +877,6 @@ see E.164/RFC3966 </p></td>
                 <td>POST</td>
                 <td>/v0/users</td>
                 <td>*</td>
-              </tr>
-              
-            
-              
-              
-              <tr>
-                <td>UpdateUser</td>
-                <td>PUT</td>
-                <td>/v0/users/{sub}</td>
-                <td>*</td>
-              </tr>
-              
-            
-              
-              
-              <tr>
-                <td>DeleteUser</td>
-                <td>DELETE</td>
-                <td>/v0/users/{sub}</td>
-                <td></td>
               </tr>
               
             
