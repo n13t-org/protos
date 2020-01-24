@@ -381,6 +381,18 @@
         }
       }
     },
+    "v0ConcatReply": {
+      "type": "object",
+      "properties": {
+        "v": {
+          "type": "string"
+        },
+        "err": {
+          "type": "string"
+        }
+      },
+      "description": "The Concat response contains the result of the concatenation."
+    },
     "v0HealthCheckResponse": {
       "type": "object",
       "properties": {
@@ -388,6 +400,19 @@
           "$ref": "#/definitions/HealthCheckResponseServingStatus"
         }
       }
+    },
+    "v0SumReply": {
+      "type": "object",
+      "properties": {
+        "v": {
+          "type": "string",
+          "format": "int64"
+        },
+        "err": {
+          "type": "string"
+        }
+      },
+      "description": "The sum response contains the result of the calculation."
     },
     "v0User": {
       "type": "object",
