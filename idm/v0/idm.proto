@@ -47,7 +47,7 @@ service IdentityManagement {
 			get: "/v0/health"
 		};
     };
-    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
+//    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
 }
 
 message HealthCheckRequest {
