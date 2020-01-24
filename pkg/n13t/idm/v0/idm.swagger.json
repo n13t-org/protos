@@ -37,29 +37,6 @@
       }
     },
     "/v0/users": {
-      "get": {
-        "summary": "/ the default rpc use for listing users",
-        "operationId": "ListUsersStream",
-        "responses": {
-          "200": {
-            "description": "A successful response.(streaming responses)",
-            "schema": {
-              "$ref": "#/x-stream-definitions/v0User"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "search",
-            "in": "query",
-            "required": false,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "IdentityManagement"
-        ]
-      },
       "post": {
         "operationId": "CreateUser",
         "responses": {
@@ -275,6 +252,7 @@
         ]
       },
       "put": {
+        "summary": "/ the default rpc use for listing users\n   rpc ListUsersStream(ListUsersRequest) returns (stream User) {\n       option (google.api.http) = {\n\t\t\tget: \"/v0/users\"\n\t\t};\n   }",
         "operationId": "UpdateUser",
         "responses": {
           "200": {
@@ -520,18 +498,6 @@
         }
       },
       "title": "Stream result of v0HealthCheckResponse"
-    },
-    "v0User": {
-      "type": "object",
-      "properties": {
-        "result": {
-          "$ref": "#/definitions/v0User"
-        },
-        "error": {
-          "$ref": "#/definitions/runtimeStreamError"
-        }
-      },
-      "title": "Stream result of v0User"
     }
   }
 }

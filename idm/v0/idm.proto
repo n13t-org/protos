@@ -24,11 +24,11 @@ service IdentityManagement {
 		};
     }
     /// the default rpc use for listing users
-    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
-        option (google.api.http) = {
-			get: "/v0/users"
-		};
-    }
+//    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
+//        option (google.api.http) = {
+//			get: "/v0/users"
+//		};
+//    }
     rpc UpdateUser(User) returns (google.protobuf.Empty) {
         option (google.api.http) = {
 			put: "/v0/users/{sub}"

@@ -65,34 +65,6 @@ func local_request_IdentityManagement_CreateUser_0(ctx context.Context, marshale
 
 }
 
-var (
-	filter_IdentityManagement_ListUsersStream_0 = &utilities.DoubleArray{Encoding: map[string]int{}, Base: []int(nil), Check: []int(nil)}
-)
-
-func request_IdentityManagement_ListUsersStream_0(ctx context.Context, marshaler runtime.Marshaler, client IdentityManagementClient, req *http.Request, pathParams map[string]string) (IdentityManagement_ListUsersStreamClient, runtime.ServerMetadata, error) {
-	var protoReq ListUsersRequest
-	var metadata runtime.ServerMetadata
-
-	if err := req.ParseForm(); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-	if err := runtime.PopulateQueryParameters(&protoReq, req.Form, filter_IdentityManagement_ListUsersStream_0); err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
-	}
-
-	stream, err := client.ListUsersStream(ctx, &protoReq)
-	if err != nil {
-		return nil, metadata, err
-	}
-	header, err := stream.Header()
-	if err != nil {
-		return nil, metadata, err
-	}
-	metadata.HeaderMD = header
-	return stream, metadata, nil
-
-}
-
 func request_IdentityManagement_UpdateUser_0(ctx context.Context, marshaler runtime.Marshaler, client IdentityManagementClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq User
 	var metadata runtime.ServerMetadata
@@ -290,13 +262,6 @@ func RegisterIdentityManagementHandlerServer(ctx context.Context, mux *runtime.S
 
 	})
 
-	mux.Handle("GET", pattern_IdentityManagement_ListUsersStream_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		err := status.Error(codes.Unimplemented, "streaming calls are not yet supported in the in-process transport")
-		_, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-		return
-	})
-
 	mux.Handle("PUT", pattern_IdentityManagement_UpdateUser_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -418,26 +383,6 @@ func RegisterIdentityManagementHandlerClient(ctx context.Context, mux *runtime.S
 
 	})
 
-	mux.Handle("GET", pattern_IdentityManagement_ListUsersStream_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
-		ctx, cancel := context.WithCancel(req.Context())
-		defer cancel()
-		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
-		rctx, err := runtime.AnnotateContext(ctx, mux, req)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-		resp, md, err := request_IdentityManagement_ListUsersStream_0(rctx, inboundMarshaler, client, req, pathParams)
-		ctx = runtime.NewServerMetadataContext(ctx, md)
-		if err != nil {
-			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
-			return
-		}
-
-		forward_IdentityManagement_ListUsersStream_0(ctx, mux, outboundMarshaler, w, req, func() (proto.Message, error) { return resp.Recv() }, mux.GetForwardResponseOptions()...)
-
-	})
-
 	mux.Handle("PUT", pattern_IdentityManagement_UpdateUser_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
@@ -504,8 +449,6 @@ func RegisterIdentityManagementHandlerClient(ctx context.Context, mux *runtime.S
 var (
 	pattern_IdentityManagement_CreateUser_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v0", "users"}, "", runtime.AssumeColonVerbOpt(true)))
 
-	pattern_IdentityManagement_ListUsersStream_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v0", "users"}, "", runtime.AssumeColonVerbOpt(true)))
-
 	pattern_IdentityManagement_UpdateUser_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v0", "users", "sub"}, "", runtime.AssumeColonVerbOpt(true)))
 
 	pattern_IdentityManagement_DeleteUser_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1, 1, 0, 4, 1, 5, 2}, []string{"v0", "users", "sub"}, "", runtime.AssumeColonVerbOpt(true)))
@@ -515,8 +458,6 @@ var (
 
 var (
 	forward_IdentityManagement_CreateUser_0 = runtime.ForwardResponseMessage
-
-	forward_IdentityManagement_ListUsersStream_0 = runtime.ForwardResponseStream
 
 	forward_IdentityManagement_UpdateUser_0 = runtime.ForwardResponseMessage
 
