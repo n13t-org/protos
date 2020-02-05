@@ -62,25 +62,124 @@ func (m *User) Validate() error {
 
 	}
 
-	// no validation rules for Sub
+	if err := m._validateUuid(m.GetSub()); err != nil {
+		return UserValidationError{
+			field:  "Sub",
+			reason: "value must be a valid UUID",
+			cause:  err,
+		}
+	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return UserValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
 
-	// no validation rules for GivenName
+	if !_User_Name_Pattern.MatchString(m.GetName()) {
+		return UserValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+		}
+	}
 
-	// no validation rules for FamilyName
+	if len(m.GetGivenName()) > 64 {
+		return UserValidationError{
+			field:  "GivenName",
+			reason: "value length must be at most 64 bytes",
+		}
+	}
 
-	// no validation rules for MiddleName
+	if !_User_GivenName_Pattern.MatchString(m.GetGivenName()) {
+		return UserValidationError{
+			field:  "GivenName",
+			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+		}
+	}
 
-	// no validation rules for Nickname
+	if len(m.GetFamilyName()) > 64 {
+		return UserValidationError{
+			field:  "FamilyName",
+			reason: "value length must be at most 64 bytes",
+		}
+	}
+
+	if !_User_FamilyName_Pattern.MatchString(m.GetFamilyName()) {
+		return UserValidationError{
+			field:  "FamilyName",
+			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+		}
+	}
+
+	if len(m.GetMiddleName()) > 64 {
+		return UserValidationError{
+			field:  "MiddleName",
+			reason: "value length must be at most 64 bytes",
+		}
+	}
+
+	if !_User_MiddleName_Pattern.MatchString(m.GetMiddleName()) {
+		return UserValidationError{
+			field:  "MiddleName",
+			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+		}
+	}
+
+	if len(m.GetNickname()) > 256 {
+		return UserValidationError{
+			field:  "Nickname",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_User_Nickname_Pattern.MatchString(m.GetNickname()) {
+		return UserValidationError{
+			field:  "Nickname",
+			reason: "value does not match regex pattern \"^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$\"",
+		}
+	}
 
 	// no validation rules for PreferredUsername
 
-	// no validation rules for Profile
+	if uri, err := url.Parse(m.GetProfile()); err != nil {
+		return UserValidationError{
+			field:  "Profile",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return UserValidationError{
+			field:  "Profile",
+			reason: "value must be absolute",
+		}
+	}
 
-	// no validation rules for Picture
+	if uri, err := url.Parse(m.GetPicture()); err != nil {
+		return UserValidationError{
+			field:  "Picture",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return UserValidationError{
+			field:  "Picture",
+			reason: "value must be absolute",
+		}
+	}
 
-	// no validation rules for Website
+	if uri, err := url.Parse(m.GetWebsite()); err != nil {
+		return UserValidationError{
+			field:  "Website",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return UserValidationError{
+			field:  "Website",
+			reason: "value must be absolute",
+		}
+	}
 
 	if !_User_Email_Pattern.MatchString(m.GetEmail()) {
 		return UserValidationError{
@@ -123,6 +222,14 @@ func (m *User) Validate() error {
 			field:  "UpdatedAt",
 			reason: "value is required",
 		}
+	}
+
+	return nil
+}
+
+func (m *User) _validateUuid(uuid string) error {
+	if matched := _user_uuidPattern.MatchString(uuid); !matched {
+		return errors.New("invalid uuid format")
 	}
 
 	return nil
@@ -181,6 +288,16 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = UserValidationError{}
+
+var _User_Name_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
+
+var _User_GivenName_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
+
+var _User_FamilyName_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
+
+var _User_MiddleName_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
+
+var _User_Nickname_Pattern = regexp.MustCompile("^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$")
 
 var _User_Email_Pattern = regexp.MustCompile("^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$")
 

@@ -241,6 +241,14 @@
                   <a href="#n13t.idm.v0.SumRequest"><span class="badge">M</span>SumRequest</a>
                 </li>
               
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
+                </li>
+              
               
                 <li>
                   <a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus"><span class="badge">E</span>HealthCheckResponse.ServingStatus</a>
@@ -627,6 +635,13 @@ see E.164/RFC3966 </p></td>
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>password</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -813,6 +828,37 @@ see E.164/RFC3966 </p></td>
 
         
       
+        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>user</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</h3>
+        <p></p>
+
+        
+
+        
+      
 
       
         <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
@@ -874,6 +920,16 @@ see E.164/RFC3966 </p></td>
                 <td>CreateUser</td>
                 <td><a href="#n13t.idm.v0.CreateUserRequest">CreateUserRequest</a></td>
                 <td><a href="#n13t.idm.v0.CreateUserResponse">CreateUserResponse</a></td>
+                <td><p>option (google.api.http) = {
+			post: &#34;/v0/users&#34;
+			body: &#34;*&#34;
+		};</p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateUser</td>
+                <td><a href="#n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</a></td>
+                <td><a href="#n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</a></td>
                 <td><p></p></td>
               </tr>
             
@@ -901,16 +957,6 @@ see E.164/RFC3966 </p></td>
               </tr>
             </thead>
             <tbody>
-            
-              
-              
-              <tr>
-                <td>CreateUser</td>
-                <td>POST</td>
-                <td>/v0/users</td>
-                <td>*</td>
-              </tr>
-              
             
               
               

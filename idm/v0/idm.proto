@@ -3,9 +3,9 @@ syntax = "proto3";
 package n13t.idm.v0;
 
 import "google/api/annotations.proto";
-import "google/protobuf/empty.proto";
+//import "google/protobuf/empty.proto";
 import "n13t/idm/v0/user.proto";
-
+import "validate/validate.proto";
 
 /**
  * Identity Management Service - manage user's private information
@@ -18,11 +18,13 @@ service IdentityManagement {
     rpc Concat (ConcatRequest) returns (ConcatReply) {}
 
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
-        option (google.api.http) = {
-			post: "/v0/users"
-			body: "*"
-		};
+//        option (google.api.http) = {
+//			post: "/v0/users"
+//			body: "*"
+//		};
     }
+
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
     /// the default rpc use for listing users
 //    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
 //        option (google.api.http) = {
@@ -52,11 +54,16 @@ service IdentityManagement {
 
 message CreateUserRequest {
     User user = 1;
+    string password = 2;
 }
 
-message CreateUserResponse {
+message CreateUserResponse {}
 
+message UpdateUserRequest {
+    User user = 1;
 }
+
+message UpdateUserResponse {}
 
 message HealthCheckRequest {
     string service = 1;

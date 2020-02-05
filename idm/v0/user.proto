@@ -18,30 +18,45 @@ message User {
 
     // OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
     // Subject - Identifier for the End-User at the Issuer.
-    string sub = 10 ;
+    string sub = 10 [(validate.rules).string.uuid = true];
 
     // End-User's full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the End-User's locale and preferences.
-    string name = 11;
+    string name = 11 [(validate.rules).string = {
+                        pattern:   "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+                        max_bytes: 256,
+                     }];
 
     // Given name(s) or first name(s) of the End-User.
-    string given_name = 12;
+    string given_name = 12 [(validate.rules).string = {
+                                pattern:   "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+                                max_bytes: 64,
+                           }];
 
     // Surname(s) or last name(s) of the End-User
-    string family_name = 14;
+    string family_name = 14 [(validate.rules).string = {
+                                pattern:   "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+                                max_bytes: 64,
+                            }];
 
     // Middle name(s) of the End-User
-    string middle_name = 15;
+    string middle_name = 15 [(validate.rules).string = {
+                                pattern:   "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+                                max_bytes: 64,
+                            }];
 
     // Casual name of the End-User
-    string nickname = 16;
+    string nickname = 16 [(validate.rules).string = {
+                            pattern:   "^[^[0-9]A-Za-z]+( [^[0-9]A-Za-z]+)*$",
+                            max_bytes: 256,
+                         }];
 
     // Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe.
     // This value MAY be any valid JSON string including special characters such as @, /, or whitespace (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability)
     string preferred_username = 17;
 
-    string profile = 20;                // URL
-    string picture = 21;                // URL
-    string website = 22;                // URL
+    string profile = 20 [(validate.rules).string.uri = true];                // URL
+    string picture = 21 [(validate.rules).string.uri = true];                // URL
+    string website = 22 [(validate.rules).string.uri = true];                // URL
 
     // RFC5322  (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability)
     string email = 30 [(validate.rules).string.pattern = "^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$"];
@@ -75,7 +90,6 @@ message User {
         string region = 4;          // State, province, prefecture, or region component.
         string postal_code = 5;     // Zip code or postal code component.
         string country = 6;         // Country name component.
-
     }
     Address address = 42;           // End-User's address
 
