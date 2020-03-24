@@ -2,29 +2,24 @@ syntax = "proto3";
 
 package n13t.idm.v0;
 
-import "google/api/annotations.proto";
+//import "google/api/annotations.proto";
 //import "google/protobuf/empty.proto";
 import "n13t/idm/v0/user.proto";
-import "validate/validate.proto";
+import "n13t/idm/v0/search.proto";
 
 /**
  * Identity Management Service - manage user's private information
  */
 service IdentityManagement {
     // Sums two integers.
-    rpc Sum (SumRequest) returns (SumReply) {}
+    rpc Sum (SumRequest) returns (SumReply);
 
     // Concatenates two strings
-    rpc Concat (ConcatRequest) returns (ConcatReply) {}
+    rpc Concat (ConcatRequest) returns (ConcatReply);
 
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
-//        option (google.api.http) = {
-//			post: "/v0/users"
-//			body: "*"
-//		};
-    }
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
 
-    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse) {}
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
     /// the default rpc use for listing users
 //    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
 //        option (google.api.http) = {
@@ -43,14 +38,14 @@ service IdentityManagement {
 //		};
 //    }
 
+    rpc Search(SearchRequest) returns (SearchResponse);
+
     // https://github.com/grpc/grpc/blob/master/doc/health-checking.md
-    rpc Check(HealthCheckRequest) returns (HealthCheckResponse) {
-        option (google.api.http) = {
-			get: "/v0/health"
-		};
-    };
+    rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
 //    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
 }
+
+
 
 message CreateUserRequest {
     User user = 1;
@@ -80,12 +75,6 @@ message HealthCheckResponse {
 
 message ListUsersRequest {
     string search = 1;
-}
-
-message SearchRequest {
-    string query = 1;
-    int32 page_number = 2;
-    int32 result_per_page = 3;
 }
 
 // The sum request contains two parameters.

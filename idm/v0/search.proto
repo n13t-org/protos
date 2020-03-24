@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package n13t.idm.v0;
+
+import "n13t/idm/v0/user.proto";
+
+message SearchRequest {
+    string index = 1;
+    string query = 2;
+    int32 limit = 3;
+    int32 offset = 4;
+}
+
+//message SearchRequest {
+//    string query = 1;
+//    int32 page_number = 2;
+//    int32 result_per_page = 3;
+//}
+
+message SearchResponse {
+    repeated User users = 1;
+}

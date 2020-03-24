@@ -73,7 +73,9 @@ func init() {
 	proto.RegisterType((*WebhookEvent)(nil), "n13t.gitlab.v4.WebhookEvent")
 }
 
-func init() { proto.RegisterFile("n13t/gitlab/v4/webhook-event.proto", fileDescriptor_0697965f6806d59c) }
+func init() {
+	proto.RegisterFile("n13t/gitlab/v4/webhook-event.proto", fileDescriptor_0697965f6806d59c)
+}
 
 var fileDescriptor_0697965f6806d59c = []byte{
 	// 236 bytes of a gzipped FileDescriptorProto

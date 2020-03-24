@@ -176,7 +176,9 @@ func init() {
 	proto.RegisterType((*Project)(nil), "n13t.gitlab.v4.Project")
 }
 
-func init() { proto.RegisterFile("n13t/gitlab/v4/project.proto", fileDescriptor_bb2710ec9ccd9b0c) }
+func init() {
+	proto.RegisterFile("n13t/gitlab/v4/project.proto", fileDescriptor_bb2710ec9ccd9b0c)
+}
 
 var fileDescriptor_bb2710ec9ccd9b0c = []byte{
 	// 371 bytes of a gzipped FileDescriptorProto

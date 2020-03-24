@@ -72,7 +72,9 @@ func init() {
 	proto.RegisterType((*Author)(nil), "n13t.gitlab.v4.Author")
 }
 
-func init() { proto.RegisterFile("n13t/gitlab/v4/author.proto", fileDescriptor_ec18b35b060ef257) }
+func init() {
+	proto.RegisterFile("n13t/gitlab/v4/author.proto", fileDescriptor_ec18b35b060ef257)
+}
 
 var fileDescriptor_ec18b35b060ef257 = []byte{
 	// 121 bytes of a gzipped FileDescriptorProto

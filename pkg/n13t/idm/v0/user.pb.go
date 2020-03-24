@@ -339,7 +339,9 @@ func init() {
 	proto.RegisterType((*User_Address)(nil), "n13t.idm.v0.User.Address")
 }
 
-func init() { proto.RegisterFile("n13t/idm/v0/user.proto", fileDescriptor_f4b0f5de40cf5538) }
+func init() {
+	proto.RegisterFile("n13t/idm/v0/user.proto", fileDescriptor_f4b0f5de40cf5538)
+}
 
 var fileDescriptor_f4b0f5de40cf5538 = []byte{
 	// 774 bytes of a gzipped FileDescriptorProto
