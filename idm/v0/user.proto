@@ -95,3 +95,16 @@ message User {
 
     google.protobuf.Timestamp updated_at = 102 [(validate.rules).timestamp.required = true];     // 1970-01-01T00:00:00Z
 }
+
+message CreateUserRequest {
+    User user = 1;
+    string password = 2;
+}
+
+message CreateUserResponse {}
+
+message UpdateUserRequest {
+    User user = 1;
+}
+
+message UpdateUserResponse {}

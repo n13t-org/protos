@@ -132,6 +132,8 @@ func (m *SearchResponse) Validate() error {
 
 	}
 
+	// no validation rules for Err
+
 	return nil
 }
 

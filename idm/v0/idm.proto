@@ -45,21 +45,6 @@ service IdentityManagement {
 //    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
 }
 
-
-
-message CreateUserRequest {
-    User user = 1;
-    string password = 2;
-}
-
-message CreateUserResponse {}
-
-message UpdateUserRequest {
-    User user = 1;
-}
-
-message UpdateUserResponse {}
-
 message HealthCheckRequest {
     string service = 1;
 }

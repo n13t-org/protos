@@ -19,4 +19,5 @@ message SearchRequest {
 
 message SearchResponse {
     repeated User users = 1;
+    string err = 2;
 }

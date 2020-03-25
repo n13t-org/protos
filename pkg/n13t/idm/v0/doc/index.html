@@ -206,14 +206,6 @@
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
-                </li>
-              
-                <li>
                   <a href="#n13t.idm.v0.HealthCheckRequest"><span class="badge">M</span>HealthCheckRequest</a>
                 </li>
               
@@ -231,14 +223,6 @@
               
                 <li>
                   <a href="#n13t.idm.v0.SumRequest"><span class="badge">M</span>SumRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
                 </li>
               
               
@@ -259,6 +243,22 @@
           <li>
             <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
             <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
+                </li>
               
                 <li>
                   <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
@@ -352,6 +352,13 @@
                   <td><p> </p></td>
                 </tr>
               
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
             </tbody>
           </table>
 
@@ -432,44 +439,6 @@
           </table>
 
           
-
-        
-      
-        <h3 id="n13t.idm.v0.CreateUserRequest">CreateUserRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>user</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>password</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.CreateUserResponse">CreateUserResponse</h3>
-        <p></p>
-
-        
 
         
       
@@ -607,37 +576,6 @@
 
         
       
-        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>user</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</h3>
-        <p></p>
-
-        
-
-        
-      
 
       
         <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
@@ -752,6 +690,75 @@ rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);</p></td>
       </div>
       <p></p>
 
+      
+        <h3 id="n13t.idm.v0.CreateUserRequest">CreateUserRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>user</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>password</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.CreateUserResponse">CreateUserResponse</h3>
+        <p></p>
+
+        
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>user</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</h3>
+        <p></p>
+
+        
+
+        
       
         <h3 id="n13t.idm.v0.User">User</h3>
         <p>Represents the user</p><p>Compatible with OIDC (OpenID Connect)</p>
