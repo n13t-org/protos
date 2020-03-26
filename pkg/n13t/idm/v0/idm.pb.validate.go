@@ -523,6 +523,8 @@ func (m *IsValidRequest) Validate() error {
 		return nil
 	}
 
+	// no validation rules for Id
+
 	// no validation rules for Password
 
 	return nil
