@@ -514,3 +514,139 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = ConcatReplyValidationError{}
+
+// Validate checks the field values on IsValidRequest with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *IsValidRequest) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Password
+
+	return nil
+}
+
+// IsValidRequestValidationError is the validation error returned by
+// IsValidRequest.Validate if the designated constraints aren't met.
+type IsValidRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e IsValidRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e IsValidRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e IsValidRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e IsValidRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e IsValidRequestValidationError) ErrorName() string { return "IsValidRequestValidationError" }
+
+// Error satisfies the builtin error interface
+func (e IsValidRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sIsValidRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = IsValidRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = IsValidRequestValidationError{}
+
+// Validate checks the field values on IsValidResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *IsValidResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for V
+
+	// no validation rules for Err
+
+	return nil
+}
+
+// IsValidResponseValidationError is the validation error returned by
+// IsValidResponse.Validate if the designated constraints aren't met.
+type IsValidResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e IsValidResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e IsValidResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e IsValidResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e IsValidResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e IsValidResponseValidationError) ErrorName() string { return "IsValidResponseValidationError" }
+
+// Error satisfies the builtin error interface
+func (e IsValidResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sIsValidResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = IsValidResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = IsValidResponseValidationError{}

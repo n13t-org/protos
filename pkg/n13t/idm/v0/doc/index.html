@@ -214,6 +214,14 @@
                 </li>
               
                 <li>
+                  <a href="#n13t.idm.v0.IsValidRequest"><span class="badge">M</span>IsValidRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.IsValidResponse"><span class="badge">M</span>IsValidResponse</a>
+                </li>
+              
+                <li>
                   <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
                 </li>
               
@@ -490,6 +498,61 @@
 
         
       
+        <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>password</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.IsValidResponse">IsValidResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
         <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
         <p></p>
 
@@ -668,6 +731,13 @@
                 <td><a href="#n13t.idm.v0.SearchRequest">SearchRequest</a></td>
                 <td><a href="#n13t.idm.v0.SearchResponse">SearchResponse</a></td>
                 <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>IsValid</td>
+                <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
+                <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
+                <td><p>for keycloak to check password</p></td>
               </tr>
             
               <tr>
