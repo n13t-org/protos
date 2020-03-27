@@ -224,6 +224,8 @@ func (m *User) Validate() error {
 		}
 	}
 
+	// no validation rules for Username
+
 	return nil
 }
 
