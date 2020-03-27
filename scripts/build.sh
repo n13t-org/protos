@@ -10,6 +10,8 @@ dir=$(find . -name 'v[0-9]*' -not -path "*.git/*" | grep -v 'gen' | grep -v 'tes
 #eval $(printf "./scripts/protoc-all -d ./ -l descriptor_set -o $OUTPUT_DIR/$d\n")
 #eval $(printf "./scripts/protoc-all -d /opt/include/n13t/ -l go  --go-package-map --lint --with-validator --with-gateway --with-docs -o $OUTPUT_DIR/$d\n")
 #exit 0
+docker pull namely/protoc-all
+
 for d in $dir; do
   d=$(echo $d | cut -d '/' -f2-)
   printf "Generating code in $d, output: $OUTPUT_DIR/n13t/$d\n"
