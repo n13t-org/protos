@@ -95,6 +95,6 @@ message IsValidRequest {
 }
 
 message IsValidResponse {
-    string v = 1;
+    bool v = 1;
     string err = 2;
 }

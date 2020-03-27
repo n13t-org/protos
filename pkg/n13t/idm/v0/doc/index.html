@@ -175,15 +175,35 @@
         
           
           <li>
-            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
+            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
+                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
+                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User.Address"><span class="badge">M</span>User.Address</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User.AttributesEntry"><span class="badge">M</span>User.AttributesEntry</a>
                 </li>
               
               
@@ -249,35 +269,15 @@
         
           
           <li>
-            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
+            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
+                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User.Address"><span class="badge">M</span>User.Address</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User.AttributesEntry"><span class="badge">M</span>User.AttributesEntry</a>
+                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
                 </li>
               
               
@@ -290,476 +290,6 @@
       </ul>
     </div>
 
-    
-      
-      <div class="file-heading">
-        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>index</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>query</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>limit</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>offset</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>users</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="n13t/idm/v0/idm.proto">n13t/idm/v0/idm.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.ConcatReply">ConcatReply</h3>
-        <p>The Concat response contains the result of the concatenation.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.ConcatRequest">ConcatRequest</h3>
-        <p>The Concat request contains two parameters.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>a</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>b</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>service</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>status</td>
-                  <td><a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>password</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.IsValidResponse">IsValidResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>search</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SumReply">SumReply</h3>
-        <p>The sum response contains the result of the calculation.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SumRequest">SumRequest</h3>
-        <p>The sum request contains two parameters.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>a</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>b</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-        <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
-        <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>UNKNOWN</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SERVING</td>
-                <td>1</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>NOT_SERVING</td>
-                <td>2</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-      
-
-      
-
-      
-        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
-        <p>Identity Management Service - manage user's private information</p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>Sum</td>
-                <td><a href="#n13t.idm.v0.SumRequest">SumRequest</a></td>
-                <td><a href="#n13t.idm.v0.SumReply">SumReply</a></td>
-                <td><p>Sums two integers.</p></td>
-              </tr>
-            
-              <tr>
-                <td>Concat</td>
-                <td><a href="#n13t.idm.v0.ConcatRequest">ConcatRequest</a></td>
-                <td><a href="#n13t.idm.v0.ConcatReply">ConcatReply</a></td>
-                <td><p>Concatenates two strings</p></td>
-              </tr>
-            
-              <tr>
-                <td>CreateUser</td>
-                <td><a href="#n13t.idm.v0.CreateUserRequest">CreateUserRequest</a></td>
-                <td><a href="#n13t.idm.v0.CreateUserResponse">CreateUserResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>UpdateUser</td>
-                <td><a href="#n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</a></td>
-                <td><a href="#n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</a></td>
-                <td><p>the default rpc use for listing users
-   rpc ListUsersStream(ListUsersRequest) returns (stream User) {
-       option (google.api.http) = {
-			get: &#34;/v0/users&#34;
-		};
-   }
-   rpc UpdateUser(User) returns (google.protobuf.Empty) {
-       option (google.api.http) = {
-			put: &#34;/v0/users/{sub}&#34;
-			body: &#34;*&#34;
-		};
-   }
-   rpc DeleteUser(User) returns (google.protobuf.Empty) {
-       option (google.api.http) = {
-			delete: &#34;/v0/users/{sub}&#34;
-		};
-   }</p></td>
-              </tr>
-            
-              <tr>
-                <td>Search</td>
-                <td><a href="#n13t.idm.v0.SearchRequest">SearchRequest</a></td>
-                <td><a href="#n13t.idm.v0.SearchResponse">SearchResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>IsValid</td>
-                <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
-                <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
-                <td><p>for keycloak to check password</p></td>
-              </tr>
-            
-              <tr>
-                <td>Check</td>
-                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
-                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
-                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md
-
-rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);</p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-
-        
     
       
       <div class="file-heading">
@@ -1093,6 +623,476 @@ see E.164/RFC3966 </p></td>
                 <tr>
                   <td>value</td>
                   <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/idm.proto">n13t/idm/v0/idm.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.ConcatReply">ConcatReply</h3>
+        <p>The Concat response contains the result of the concatenation.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.ConcatRequest">ConcatRequest</h3>
+        <p>The Concat request contains two parameters.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>a</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>b</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>service</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>password</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.IsValidResponse">IsValidResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>search</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SumReply">SumReply</h3>
+        <p>The sum response contains the result of the calculation.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SumRequest">SumRequest</h3>
+        <p>The sum request contains two parameters.</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>a</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>b</td>
+                  <td><a href="#int64">int64</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>UNKNOWN</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SERVING</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NOT_SERVING</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
+        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
+        <p>Identity Management Service - manage user's private information</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Sum</td>
+                <td><a href="#n13t.idm.v0.SumRequest">SumRequest</a></td>
+                <td><a href="#n13t.idm.v0.SumReply">SumReply</a></td>
+                <td><p>Sums two integers.</p></td>
+              </tr>
+            
+              <tr>
+                <td>Concat</td>
+                <td><a href="#n13t.idm.v0.ConcatRequest">ConcatRequest</a></td>
+                <td><a href="#n13t.idm.v0.ConcatReply">ConcatReply</a></td>
+                <td><p>Concatenates two strings</p></td>
+              </tr>
+            
+              <tr>
+                <td>CreateUser</td>
+                <td><a href="#n13t.idm.v0.CreateUserRequest">CreateUserRequest</a></td>
+                <td><a href="#n13t.idm.v0.CreateUserResponse">CreateUserResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateUser</td>
+                <td><a href="#n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</a></td>
+                <td><a href="#n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</a></td>
+                <td><p>the default rpc use for listing users
+   rpc ListUsersStream(ListUsersRequest) returns (stream User) {
+       option (google.api.http) = {
+			get: &#34;/v0/users&#34;
+		};
+   }
+   rpc UpdateUser(User) returns (google.protobuf.Empty) {
+       option (google.api.http) = {
+			put: &#34;/v0/users/{sub}&#34;
+			body: &#34;*&#34;
+		};
+   }
+   rpc DeleteUser(User) returns (google.protobuf.Empty) {
+       option (google.api.http) = {
+			delete: &#34;/v0/users/{sub}&#34;
+		};
+   }</p></td>
+              </tr>
+            
+              <tr>
+                <td>Search</td>
+                <td><a href="#n13t.idm.v0.SearchRequest">SearchRequest</a></td>
+                <td><a href="#n13t.idm.v0.SearchResponse">SearchResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>IsValid</td>
+                <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
+                <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
+                <td><p>for keycloak to check password</p></td>
+              </tr>
+            
+              <tr>
+                <td>Check</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
+                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md
+
+rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);</p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+
+        
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>query</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>limit</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>offset</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>users</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
