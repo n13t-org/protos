@@ -175,6 +175,29 @@
         
           
           <li>
+            <a href="#n13t%2fidm%2fv0%2fhealth.proto">n13t/idm/v0/health.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckRequest"><span class="badge">M</span>HealthCheckRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckResponse"><span class="badge">M</span>HealthCheckResponse</a>
+                </li>
+              
+              
+                <li>
+                  <a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus"><span class="badge">E</span>HealthCheckResponse.ServingStatus</a>
+                </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
             <ul>
               
@@ -206,14 +229,6 @@
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.HealthCheckRequest"><span class="badge">M</span>HealthCheckRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.HealthCheckResponse"><span class="badge">M</span>HealthCheckResponse</a>
-                </li>
-              
-                <li>
                   <a href="#n13t.idm.v0.IsValidRequest"><span class="badge">M</span>IsValidRequest</a>
                 </li>
               
@@ -233,10 +248,6 @@
                   <a href="#n13t.idm.v0.SumRequest"><span class="badge">M</span>SumRequest</a>
                 </li>
               
-              
-                <li>
-                  <a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus"><span class="badge">E</span>HealthCheckResponse.ServingStatus</a>
-                </li>
               
               
               
@@ -290,6 +301,97 @@
       </ul>
     </div>
 
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/health.proto">n13t/idm/v0/health.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>service</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+        <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>UNKNOWN</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SERVING</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>NOT_SERVING</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
     
       
       <div class="file-heading">
@@ -439,54 +541,6 @@
                 <tr>
                   <td>b</td>
                   <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>service</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>status</td>
-                  <td><a href="#n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -648,35 +702,6 @@
       
 
       
-        <h3 id="n13t.idm.v0.HealthCheckResponse.ServingStatus">HealthCheckResponse.ServingStatus</h3>
-        <p></p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>UNKNOWN</td>
-                <td>0</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>SERVING</td>
-                <td>1</td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>NOT_SERVING</td>
-                <td>2</td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-      
 
       
 
@@ -751,9 +776,14 @@
                 <td>Check</td>
                 <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
                 <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
-                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md
-
-rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);</p></td>
+                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md</p></td>
+              </tr>
+            
+              <tr>
+                <td>Watch</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a> stream</td>
+                <td><p></p></td>
               </tr>
             
           </tbody>
