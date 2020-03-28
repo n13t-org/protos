@@ -252,6 +252,10 @@
               
               
                 <li>
+                  <a href="#n13t.idm.v0.Health"><span class="badge">S</span>Health</a>
+                </li>
+              
+                <li>
                   <a href="#n13t.idm.v0.IdentityManagement"><span class="badge">S</span>IdentityManagement</a>
                 </li>
               
@@ -706,6 +710,32 @@
       
 
       
+        <h3 id="n13t.idm.v0.Health">Health</h3>
+        <p></p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>Check</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>Watch</td>
+                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
+                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a> stream</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+
+        
         <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
         <p>Identity Management Service - manage user's private information</p>
         <table class="enum-table">
@@ -770,20 +800,6 @@
                 <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
                 <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
                 <td><p>for keycloak to check password</p></td>
-              </tr>
-            
-              <tr>
-                <td>Check</td>
-                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
-                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a></td>
-                <td><p>https://github.com/grpc/grpc/blob/master/doc/health-checking.md</p></td>
-              </tr>
-            
-              <tr>
-                <td>Watch</td>
-                <td><a href="#n13t.idm.v0.HealthCheckRequest">HealthCheckRequest</a></td>
-                <td><a href="#n13t.idm.v0.HealthCheckResponse">HealthCheckResponse</a> stream</td>
-                <td><p></p></td>
               </tr>
             
           </tbody>
