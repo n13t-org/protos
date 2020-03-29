@@ -392,6 +392,8 @@ func (m *CreateUserResponse) Validate() error {
 		return nil
 	}
 
+	// no validation rules for Err
+
 	return nil
 }
 
@@ -535,6 +537,8 @@ func (m *UpdateUserResponse) Validate() error {
 	if m == nil {
 		return nil
 	}
+
+	// no validation rules for Err
 
 	return nil
 }

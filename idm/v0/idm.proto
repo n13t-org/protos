@@ -6,7 +6,6 @@ package n13t.idm.v0;
 //import "google/protobuf/empty.proto";
 import "n13t/idm/v0/user.proto";
 import "n13t/idm/v0/search.proto";
-import "n13t/idm/v0/health.proto";
 
 /**
  * Identity Management Service - manage user's private information
@@ -19,40 +18,16 @@ service IdentityManagement {
     rpc Concat (ConcatRequest) returns (ConcatReply);
 
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
-
     rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
-    /// the default rpc use for listing users
-//    rpc ListUsersStream(ListUsersRequest) returns (stream User) {
-//        option (google.api.http) = {
-//			get: "/v0/users"
-//		};
-//    }
-//    rpc UpdateUser(User) returns (google.protobuf.Empty) {
-//        option (google.api.http) = {
-//			put: "/v0/users/{sub}"
-//			body: "*"
-//		};
-//    }
 //    rpc DeleteUser(User) returns (google.protobuf.Empty) {
 //        option (google.api.http) = {
 //			delete: "/v0/users/{sub}"
 //		};
 //    }
-
     rpc Search(SearchRequest) returns (SearchResponse);
 
     // for keycloak to check password
     rpc IsValid(IsValidRequest) returns (IsValidResponse);
-
-    // https://github.com/grpc/grpc/blob/master/doc/health-checking.md
-//    rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
-//    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
-}
-
-service Health {
-    rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
-
-    rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
 }
 
 message ListUsersRequest {

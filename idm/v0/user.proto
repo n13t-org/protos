@@ -103,10 +103,14 @@ message CreateUserRequest {
     string password = 2;
 }
 
-message CreateUserResponse {}
+message CreateUserResponse {
+    string err = 10;
+}
 
 message UpdateUserRequest {
     User user = 1;
 }
 
-message UpdateUserResponse {}
+message UpdateUserResponse {
+    string err = 10;
+}
