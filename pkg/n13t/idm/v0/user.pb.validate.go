@@ -226,6 +226,8 @@ func (m *User) Validate() error {
 
 	// no validation rules for Username
 
+	// no validation rules for Password
+
 	return nil
 }
 

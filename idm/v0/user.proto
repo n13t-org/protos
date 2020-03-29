@@ -96,6 +96,7 @@ message User {
     // custom fields
     google.protobuf.Timestamp updated_at = 102 [(validate.rules).timestamp.required = true];     // 1970-01-01T00:00:00Z
     string username = 200;
+    string password = 201;
 }
 
 message CreateUserRequest {
