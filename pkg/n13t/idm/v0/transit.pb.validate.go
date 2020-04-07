@@ -36,24 +36,22 @@ var (
 // define the regex for a UUID once up-front
 var _transit_uuidPattern = regexp.MustCompile("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")
 
-// Validate checks the field values on TransitData with the rules defined in
+// Validate checks the field values on EncryptRequest with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
 // is returned.
-func (m *TransitData) Validate() error {
+func (m *EncryptRequest) Validate() error {
 	if m == nil {
 		return nil
 	}
 
 	// no validation rules for Plaintext
 
-	// no validation rules for Ciphertext
-
 	return nil
 }
 
-// TransitDataValidationError is the validation error returned by
-// TransitData.Validate if the designated constraints aren't met.
-type TransitDataValidationError struct {
+// EncryptRequestValidationError is the validation error returned by
+// EncryptRequest.Validate if the designated constraints aren't met.
+type EncryptRequestValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -61,22 +59,22 @@ type TransitDataValidationError struct {
 }
 
 // Field function returns field value.
-func (e TransitDataValidationError) Field() string { return e.field }
+func (e EncryptRequestValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e TransitDataValidationError) Reason() string { return e.reason }
+func (e EncryptRequestValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e TransitDataValidationError) Cause() error { return e.cause }
+func (e EncryptRequestValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e TransitDataValidationError) Key() bool { return e.key }
+func (e EncryptRequestValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e TransitDataValidationError) ErrorName() string { return "TransitDataValidationError" }
+func (e EncryptRequestValidationError) ErrorName() string { return "EncryptRequestValidationError" }
 
 // Error satisfies the builtin error interface
-func (e TransitDataValidationError) Error() string {
+func (e EncryptRequestValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -88,14 +86,14 @@ func (e TransitDataValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sTransitData.%s: %s%s",
+		"invalid %sEncryptRequest.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = TransitDataValidationError{}
+var _ error = EncryptRequestValidationError{}
 
 var _ interface {
 	Field() string
@@ -103,4 +101,205 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = TransitDataValidationError{}
+} = EncryptRequestValidationError{}
+
+// Validate checks the field values on EncryptResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *EncryptResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Ciphertext
+
+	return nil
+}
+
+// EncryptResponseValidationError is the validation error returned by
+// EncryptResponse.Validate if the designated constraints aren't met.
+type EncryptResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e EncryptResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e EncryptResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e EncryptResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e EncryptResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e EncryptResponseValidationError) ErrorName() string { return "EncryptResponseValidationError" }
+
+// Error satisfies the builtin error interface
+func (e EncryptResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sEncryptResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = EncryptResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = EncryptResponseValidationError{}
+
+// Validate checks the field values on DecryptRequest with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *DecryptRequest) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Ciphertext
+
+	return nil
+}
+
+// DecryptRequestValidationError is the validation error returned by
+// DecryptRequest.Validate if the designated constraints aren't met.
+type DecryptRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e DecryptRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e DecryptRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e DecryptRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e DecryptRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e DecryptRequestValidationError) ErrorName() string { return "DecryptRequestValidationError" }
+
+// Error satisfies the builtin error interface
+func (e DecryptRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sDecryptRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = DecryptRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = DecryptRequestValidationError{}
+
+// Validate checks the field values on DecryptResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, an
+// error is returned.
+func (m *DecryptResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Plaintext
+
+	return nil
+}
+
+// DecryptResponseValidationError is the validation error returned by
+// DecryptResponse.Validate if the designated constraints aren't met.
+type DecryptResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e DecryptResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e DecryptResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e DecryptResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e DecryptResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e DecryptResponseValidationError) ErrorName() string { return "DecryptResponseValidationError" }
+
+// Error satisfies the builtin error interface
+func (e DecryptResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sDecryptResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = DecryptResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = DecryptResponseValidationError{}

@@ -218,7 +218,19 @@
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.TransitData"><span class="badge">M</span>TransitData</a>
+                  <a href="#n13t.idm.v0.DecryptRequest"><span class="badge">M</span>DecryptRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.DecryptResponse"><span class="badge">M</span>DecryptResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.EncryptRequest"><span class="badge">M</span>EncryptRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.EncryptResponse"><span class="badge">M</span>EncryptResponse</a>
                 </li>
               
               
@@ -694,7 +706,31 @@ see E.164/RFC3966 </p></td>
       <p></p>
 
       
-        <h3 id="n13t.idm.v0.TransitData">TransitData</h3>
+        <h3 id="n13t.idm.v0.DecryptRequest">DecryptRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>ciphertext</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.DecryptResponse">DecryptResponse</h3>
         <p></p>
 
         
@@ -710,6 +746,47 @@ see E.164/RFC3966 </p></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.EncryptRequest">EncryptRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>plaintext</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.EncryptResponse">EncryptResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
               
                 <tr>
                   <td>ciphertext</td>
@@ -1010,10 +1087,17 @@ see E.164/RFC3966 </p></td>
               </tr>
             
               <tr>
-                <td>Transit</td>
-                <td><a href="#n13t.idm.v0.TransitData">TransitData</a></td>
-                <td><a href="#n13t.idm.v0.TransitData">TransitData</a></td>
+                <td>Encrypt</td>
+                <td><a href="#n13t.idm.v0.EncryptRequest">EncryptRequest</a></td>
+                <td><a href="#n13t.idm.v0.EncryptResponse">EncryptResponse</a></td>
                 <td><p>transit engine</p></td>
+              </tr>
+            
+              <tr>
+                <td>Decrypt</td>
+                <td><a href="#n13t.idm.v0.DecryptRequest">DecryptRequest</a></td>
+                <td><a href="#n13t.idm.v0.DecryptResponse">DecryptResponse</a></td>
+                <td><p></p></td>
               </tr>
             
           </tbody>

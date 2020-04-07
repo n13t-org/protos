@@ -20,55 +20,167 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type TransitData struct {
+type EncryptRequest struct {
 	Plaintext            string   `protobuf:"bytes,1,opt,name=plaintext,proto3" json:"plaintext,omitempty"`
-	Ciphertext           string   `protobuf:"bytes,2,opt,name=ciphertext,proto3" json:"ciphertext,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *TransitData) Reset()         { *m = TransitData{} }
-func (m *TransitData) String() string { return proto.CompactTextString(m) }
-func (*TransitData) ProtoMessage()    {}
-func (*TransitData) Descriptor() ([]byte, []int) {
+func (m *EncryptRequest) Reset()         { *m = EncryptRequest{} }
+func (m *EncryptRequest) String() string { return proto.CompactTextString(m) }
+func (*EncryptRequest) ProtoMessage()    {}
+func (*EncryptRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_6a7665d79a06aae2, []int{0}
 }
 
-func (m *TransitData) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_TransitData.Unmarshal(m, b)
+func (m *EncryptRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_EncryptRequest.Unmarshal(m, b)
 }
-func (m *TransitData) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_TransitData.Marshal(b, m, deterministic)
+func (m *EncryptRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_EncryptRequest.Marshal(b, m, deterministic)
 }
-func (m *TransitData) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_TransitData.Merge(m, src)
+func (m *EncryptRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_EncryptRequest.Merge(m, src)
 }
-func (m *TransitData) XXX_Size() int {
-	return xxx_messageInfo_TransitData.Size(m)
+func (m *EncryptRequest) XXX_Size() int {
+	return xxx_messageInfo_EncryptRequest.Size(m)
 }
-func (m *TransitData) XXX_DiscardUnknown() {
-	xxx_messageInfo_TransitData.DiscardUnknown(m)
+func (m *EncryptRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_EncryptRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_TransitData proto.InternalMessageInfo
+var xxx_messageInfo_EncryptRequest proto.InternalMessageInfo
 
-func (m *TransitData) GetPlaintext() string {
+func (m *EncryptRequest) GetPlaintext() string {
 	if m != nil {
 		return m.Plaintext
 	}
 	return ""
 }
 
-func (m *TransitData) GetCiphertext() string {
+type EncryptResponse struct {
+	Ciphertext           string   `protobuf:"bytes,1,opt,name=ciphertext,proto3" json:"ciphertext,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *EncryptResponse) Reset()         { *m = EncryptResponse{} }
+func (m *EncryptResponse) String() string { return proto.CompactTextString(m) }
+func (*EncryptResponse) ProtoMessage()    {}
+func (*EncryptResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_6a7665d79a06aae2, []int{1}
+}
+
+func (m *EncryptResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_EncryptResponse.Unmarshal(m, b)
+}
+func (m *EncryptResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_EncryptResponse.Marshal(b, m, deterministic)
+}
+func (m *EncryptResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_EncryptResponse.Merge(m, src)
+}
+func (m *EncryptResponse) XXX_Size() int {
+	return xxx_messageInfo_EncryptResponse.Size(m)
+}
+func (m *EncryptResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_EncryptResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_EncryptResponse proto.InternalMessageInfo
+
+func (m *EncryptResponse) GetCiphertext() string {
 	if m != nil {
 		return m.Ciphertext
 	}
 	return ""
 }
 
+type DecryptRequest struct {
+	Ciphertext           string   `protobuf:"bytes,1,opt,name=ciphertext,proto3" json:"ciphertext,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *DecryptRequest) Reset()         { *m = DecryptRequest{} }
+func (m *DecryptRequest) String() string { return proto.CompactTextString(m) }
+func (*DecryptRequest) ProtoMessage()    {}
+func (*DecryptRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_6a7665d79a06aae2, []int{2}
+}
+
+func (m *DecryptRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DecryptRequest.Unmarshal(m, b)
+}
+func (m *DecryptRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DecryptRequest.Marshal(b, m, deterministic)
+}
+func (m *DecryptRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DecryptRequest.Merge(m, src)
+}
+func (m *DecryptRequest) XXX_Size() int {
+	return xxx_messageInfo_DecryptRequest.Size(m)
+}
+func (m *DecryptRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_DecryptRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DecryptRequest proto.InternalMessageInfo
+
+func (m *DecryptRequest) GetCiphertext() string {
+	if m != nil {
+		return m.Ciphertext
+	}
+	return ""
+}
+
+type DecryptResponse struct {
+	Plaintext            string   `protobuf:"bytes,1,opt,name=plaintext,proto3" json:"plaintext,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *DecryptResponse) Reset()         { *m = DecryptResponse{} }
+func (m *DecryptResponse) String() string { return proto.CompactTextString(m) }
+func (*DecryptResponse) ProtoMessage()    {}
+func (*DecryptResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_6a7665d79a06aae2, []int{3}
+}
+
+func (m *DecryptResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DecryptResponse.Unmarshal(m, b)
+}
+func (m *DecryptResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DecryptResponse.Marshal(b, m, deterministic)
+}
+func (m *DecryptResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DecryptResponse.Merge(m, src)
+}
+func (m *DecryptResponse) XXX_Size() int {
+	return xxx_messageInfo_DecryptResponse.Size(m)
+}
+func (m *DecryptResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_DecryptResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DecryptResponse proto.InternalMessageInfo
+
+func (m *DecryptResponse) GetPlaintext() string {
+	if m != nil {
+		return m.Plaintext
+	}
+	return ""
+}
+
 func init() {
-	proto.RegisterType((*TransitData)(nil), "n13t.idm.v0.TransitData")
+	proto.RegisterType((*EncryptRequest)(nil), "n13t.idm.v0.EncryptRequest")
+	proto.RegisterType((*EncryptResponse)(nil), "n13t.idm.v0.EncryptResponse")
+	proto.RegisterType((*DecryptRequest)(nil), "n13t.idm.v0.DecryptRequest")
+	proto.RegisterType((*DecryptResponse)(nil), "n13t.idm.v0.DecryptResponse")
 }
 
 func init() {
@@ -76,13 +188,15 @@ func init() {
 }
 
 var fileDescriptor_6a7665d79a06aae2 = []byte{
-	// 117 bytes of a gzipped FileDescriptorProto
+	// 153 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x92, 0xcc, 0x33, 0x34, 0x2e,
 	0xd1, 0xcf, 0x4c, 0xc9, 0xd5, 0x2f, 0x33, 0xd0, 0x2f, 0x29, 0x4a, 0xcc, 0x2b, 0xce, 0x2c, 0xd1,
 	0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0xe2, 0x06, 0x49, 0xe9, 0x65, 0xa6, 0xe4, 0xea, 0x95, 0x19,
-	0x28, 0x79, 0x73, 0x71, 0x87, 0x40, 0x64, 0x5d, 0x12, 0x4b, 0x12, 0x85, 0x64, 0xb8, 0x38, 0x0b,
-	0x72, 0x12, 0x33, 0xf3, 0x4a, 0x52, 0x2b, 0x4a, 0x24, 0x18, 0x15, 0x18, 0x35, 0x38, 0x83, 0x10,
-	0x02, 0x42, 0x72, 0x5c, 0x5c, 0xc9, 0x99, 0x05, 0x19, 0xa9, 0x45, 0x60, 0x69, 0x26, 0xb0, 0x34,
-	0x92, 0x48, 0x12, 0x1b, 0xd8, 0x02, 0x63, 0x40, 0x00, 0x00, 0x00, 0xff, 0xff, 0xe2, 0x20, 0x87,
-	0x98, 0x7d, 0x00, 0x00, 0x00,
+	0x28, 0xe9, 0x71, 0xf1, 0xb9, 0xe6, 0x25, 0x17, 0x55, 0x16, 0x94, 0x04, 0xa5, 0x16, 0x96, 0xa6,
+	0x16, 0x97, 0x08, 0xc9, 0x70, 0x71, 0x16, 0xe4, 0x24, 0x66, 0xe6, 0x95, 0xa4, 0x56, 0x94, 0x48,
+	0x30, 0x2a, 0x30, 0x6a, 0x70, 0x06, 0x21, 0x04, 0x94, 0x0c, 0xb9, 0xf8, 0xe1, 0xea, 0x8b, 0x0b,
+	0xf2, 0xf3, 0x8a, 0x53, 0x85, 0xe4, 0xb8, 0xb8, 0x92, 0x33, 0x0b, 0x32, 0x52, 0x8b, 0x90, 0x74,
+	0x20, 0x89, 0x28, 0x19, 0x70, 0xf1, 0xb9, 0xa4, 0xa2, 0x58, 0x41, 0x48, 0x87, 0x3e, 0x17, 0x3f,
+	0x5c, 0x07, 0xd4, 0x12, 0xbc, 0xae, 0x4a, 0x62, 0x03, 0xfb, 0xcc, 0x18, 0x10, 0x00, 0x00, 0xff,
+	0xff, 0xf3, 0x37, 0x40, 0x6d, 0xf6, 0x00, 0x00, 0x00,
 }

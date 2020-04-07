@@ -31,7 +31,8 @@ service IdentityManagement {
     rpc IsValid(IsValidRequest) returns (IsValidResponse);
 
     // transit engine
-    rpc Transit(TransitData) returns (TransitData);
+    rpc Encrypt(EncryptRequest) returns (EncryptResponse);
+    rpc Decrypt(DecryptRequest) returns (DecryptResponse);
 }
 
 message ListUsersRequest {
