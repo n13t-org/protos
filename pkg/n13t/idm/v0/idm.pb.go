@@ -24,237 +24,6 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type ListUsersRequest struct {
-	Search               string   `protobuf:"bytes,1,opt,name=search,proto3" json:"search,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *ListUsersRequest) Reset()         { *m = ListUsersRequest{} }
-func (m *ListUsersRequest) String() string { return proto.CompactTextString(m) }
-func (*ListUsersRequest) ProtoMessage()    {}
-func (*ListUsersRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{0}
-}
-
-func (m *ListUsersRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ListUsersRequest.Unmarshal(m, b)
-}
-func (m *ListUsersRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ListUsersRequest.Marshal(b, m, deterministic)
-}
-func (m *ListUsersRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ListUsersRequest.Merge(m, src)
-}
-func (m *ListUsersRequest) XXX_Size() int {
-	return xxx_messageInfo_ListUsersRequest.Size(m)
-}
-func (m *ListUsersRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ListUsersRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ListUsersRequest proto.InternalMessageInfo
-
-func (m *ListUsersRequest) GetSearch() string {
-	if m != nil {
-		return m.Search
-	}
-	return ""
-}
-
-// The sum request contains two parameters.
-type SumRequest struct {
-	A                    int64    `protobuf:"varint,1,opt,name=a,proto3" json:"a,omitempty"`
-	B                    int64    `protobuf:"varint,2,opt,name=b,proto3" json:"b,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *SumRequest) Reset()         { *m = SumRequest{} }
-func (m *SumRequest) String() string { return proto.CompactTextString(m) }
-func (*SumRequest) ProtoMessage()    {}
-func (*SumRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{1}
-}
-
-func (m *SumRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SumRequest.Unmarshal(m, b)
-}
-func (m *SumRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SumRequest.Marshal(b, m, deterministic)
-}
-func (m *SumRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SumRequest.Merge(m, src)
-}
-func (m *SumRequest) XXX_Size() int {
-	return xxx_messageInfo_SumRequest.Size(m)
-}
-func (m *SumRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_SumRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SumRequest proto.InternalMessageInfo
-
-func (m *SumRequest) GetA() int64 {
-	if m != nil {
-		return m.A
-	}
-	return 0
-}
-
-func (m *SumRequest) GetB() int64 {
-	if m != nil {
-		return m.B
-	}
-	return 0
-}
-
-// The sum response contains the result of the calculation.
-type SumReply struct {
-	V                    int64    `protobuf:"varint,1,opt,name=v,proto3" json:"v,omitempty"`
-	Err                  string   `protobuf:"bytes,2,opt,name=err,proto3" json:"err,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *SumReply) Reset()         { *m = SumReply{} }
-func (m *SumReply) String() string { return proto.CompactTextString(m) }
-func (*SumReply) ProtoMessage()    {}
-func (*SumReply) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{2}
-}
-
-func (m *SumReply) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SumReply.Unmarshal(m, b)
-}
-func (m *SumReply) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SumReply.Marshal(b, m, deterministic)
-}
-func (m *SumReply) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SumReply.Merge(m, src)
-}
-func (m *SumReply) XXX_Size() int {
-	return xxx_messageInfo_SumReply.Size(m)
-}
-func (m *SumReply) XXX_DiscardUnknown() {
-	xxx_messageInfo_SumReply.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SumReply proto.InternalMessageInfo
-
-func (m *SumReply) GetV() int64 {
-	if m != nil {
-		return m.V
-	}
-	return 0
-}
-
-func (m *SumReply) GetErr() string {
-	if m != nil {
-		return m.Err
-	}
-	return ""
-}
-
-// The Concat request contains two parameters.
-type ConcatRequest struct {
-	A                    string   `protobuf:"bytes,1,opt,name=a,proto3" json:"a,omitempty"`
-	B                    string   `protobuf:"bytes,2,opt,name=b,proto3" json:"b,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *ConcatRequest) Reset()         { *m = ConcatRequest{} }
-func (m *ConcatRequest) String() string { return proto.CompactTextString(m) }
-func (*ConcatRequest) ProtoMessage()    {}
-func (*ConcatRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{3}
-}
-
-func (m *ConcatRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ConcatRequest.Unmarshal(m, b)
-}
-func (m *ConcatRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ConcatRequest.Marshal(b, m, deterministic)
-}
-func (m *ConcatRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ConcatRequest.Merge(m, src)
-}
-func (m *ConcatRequest) XXX_Size() int {
-	return xxx_messageInfo_ConcatRequest.Size(m)
-}
-func (m *ConcatRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ConcatRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ConcatRequest proto.InternalMessageInfo
-
-func (m *ConcatRequest) GetA() string {
-	if m != nil {
-		return m.A
-	}
-	return ""
-}
-
-func (m *ConcatRequest) GetB() string {
-	if m != nil {
-		return m.B
-	}
-	return ""
-}
-
-// The Concat response contains the result of the concatenation.
-type ConcatReply struct {
-	V                    string   `protobuf:"bytes,1,opt,name=v,proto3" json:"v,omitempty"`
-	Err                  string   `protobuf:"bytes,2,opt,name=err,proto3" json:"err,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *ConcatReply) Reset()         { *m = ConcatReply{} }
-func (m *ConcatReply) String() string { return proto.CompactTextString(m) }
-func (*ConcatReply) ProtoMessage()    {}
-func (*ConcatReply) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{4}
-}
-
-func (m *ConcatReply) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ConcatReply.Unmarshal(m, b)
-}
-func (m *ConcatReply) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ConcatReply.Marshal(b, m, deterministic)
-}
-func (m *ConcatReply) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ConcatReply.Merge(m, src)
-}
-func (m *ConcatReply) XXX_Size() int {
-	return xxx_messageInfo_ConcatReply.Size(m)
-}
-func (m *ConcatReply) XXX_DiscardUnknown() {
-	xxx_messageInfo_ConcatReply.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ConcatReply proto.InternalMessageInfo
-
-func (m *ConcatReply) GetV() string {
-	if m != nil {
-		return m.V
-	}
-	return ""
-}
-
-func (m *ConcatReply) GetErr() string {
-	if m != nil {
-		return m.Err
-	}
-	return ""
-}
-
 type IsValidRequest struct {
 	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Password             string   `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
@@ -267,7 +36,7 @@ func (m *IsValidRequest) Reset()         { *m = IsValidRequest{} }
 func (m *IsValidRequest) String() string { return proto.CompactTextString(m) }
 func (*IsValidRequest) ProtoMessage()    {}
 func (*IsValidRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{5}
+	return fileDescriptor_c4e677661a4128a4, []int{0}
 }
 
 func (m *IsValidRequest) XXX_Unmarshal(b []byte) error {
@@ -314,7 +83,7 @@ func (m *IsValidResponse) Reset()         { *m = IsValidResponse{} }
 func (m *IsValidResponse) String() string { return proto.CompactTextString(m) }
 func (*IsValidResponse) ProtoMessage()    {}
 func (*IsValidResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_c4e677661a4128a4, []int{6}
+	return fileDescriptor_c4e677661a4128a4, []int{1}
 }
 
 func (m *IsValidResponse) XXX_Unmarshal(b []byte) error {
@@ -350,11 +119,6 @@ func (m *IsValidResponse) GetErr() string {
 }
 
 func init() {
-	proto.RegisterType((*ListUsersRequest)(nil), "n13t.idm.v0.ListUsersRequest")
-	proto.RegisterType((*SumRequest)(nil), "n13t.idm.v0.SumRequest")
-	proto.RegisterType((*SumReply)(nil), "n13t.idm.v0.SumReply")
-	proto.RegisterType((*ConcatRequest)(nil), "n13t.idm.v0.ConcatRequest")
-	proto.RegisterType((*ConcatReply)(nil), "n13t.idm.v0.ConcatReply")
 	proto.RegisterType((*IsValidRequest)(nil), "n13t.idm.v0.IsValidRequest")
 	proto.RegisterType((*IsValidResponse)(nil), "n13t.idm.v0.IsValidResponse")
 }
@@ -364,33 +128,26 @@ func init() {
 }
 
 var fileDescriptor_c4e677661a4128a4 = []byte{
-	// 407 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x93, 0xcf, 0x8b, 0xda, 0x40,
-	0x14, 0xc7, 0x89, 0x96, 0xd4, 0x3c, 0x5b, 0x2b, 0x03, 0xda, 0x34, 0x2d, 0x6d, 0xc9, 0x49, 0x2c,
-	0x8d, 0x5a, 0xe9, 0xad, 0x14, 0x16, 0xdd, 0x83, 0xb0, 0x5e, 0x22, 0xee, 0x7d, 0x34, 0xc3, 0x6e,
-	0xc0, 0x4c, 0xb2, 0x33, 0x93, 0x2c, 0xfe, 0x73, 0xfb, 0xb7, 0x2d, 0x93, 0x4c, 0x7e, 0xe9, 0xec,
-	0x49, 0xdf, 0xfb, 0x7c, 0xdf, 0x27, 0xbc, 0x3c, 0x85, 0x11, 0x5d, 0x2c, 0xc5, 0x2c, 0x0c, 0xa2,
-	0x59, 0x36, 0x97, 0x1f, 0x5e, 0xc2, 0x62, 0x11, 0xa3, 0xbe, 0x6c, 0x7b, 0xb2, 0xce, 0xe6, 0xce,
-	0xb8, 0x99, 0x49, 0x39, 0x61, 0x45, 0xc8, 0xb1, 0x9b, 0x7d, 0x4e, 0x30, 0x3b, 0x3e, 0x2a, 0xf2,
-	0xa5, 0x49, 0x04, 0xc3, 0x94, 0x87, 0xa2, 0x40, 0xee, 0x14, 0x86, 0x77, 0x21, 0x17, 0x7b, 0x4e,
-	0x18, 0xf7, 0xc9, 0x53, 0x4a, 0xb8, 0x40, 0x63, 0x30, 0x8b, 0x71, 0xdb, 0xf8, 0x69, 0x4c, 0x2c,
-	0x5f, 0x55, 0xee, 0x04, 0x60, 0x97, 0x46, 0x65, 0xea, 0x03, 0x18, 0x38, 0x0f, 0x74, 0x7d, 0x03,
-	0xcb, 0xea, 0x60, 0x77, 0x8a, 0xea, 0xe0, 0x4e, 0xa1, 0x97, 0x27, 0x93, 0xd3, 0x59, 0x92, 0xac,
-	0xcc, 0x65, 0x68, 0x08, 0x5d, 0xc2, 0x58, 0x9e, 0xb4, 0x7c, 0xf9, 0xd5, 0xfd, 0x05, 0x1f, 0x57,
-	0x31, 0x3d, 0x62, 0x71, 0x25, 0xb6, 0x5a, 0x62, 0x4b, 0x8a, 0x7f, 0x43, 0xbf, 0x0c, 0xb7, 0xdc,
-	0x96, 0xde, 0xfd, 0x0f, 0x06, 0x1b, 0x7e, 0x8f, 0x4f, 0x61, 0x50, 0xca, 0x07, 0xd0, 0x09, 0x03,
-	0x35, 0xd2, 0x09, 0x03, 0xe4, 0x40, 0x2f, 0xc1, 0x9c, 0x3f, 0xc7, 0x2c, 0x50, 0x83, 0x55, 0xed,
-	0x2e, 0xe0, 0x53, 0x35, 0xcd, 0x93, 0x98, 0x72, 0x52, 0x3f, 0xb0, 0xa7, 0x7d, 0xe0, 0x9f, 0x97,
-	0x77, 0x80, 0x36, 0x01, 0xa1, 0x22, 0x14, 0xe7, 0x2d, 0xa6, 0xf8, 0x81, 0x44, 0x84, 0x0a, 0xf4,
-	0x17, 0xba, 0xbb, 0x34, 0x42, 0x9f, 0xbd, 0xc6, 0x1d, 0xbd, 0xfa, 0x5d, 0x3a, 0xa3, 0x6b, 0x20,
-	0xd7, 0xfb, 0x0f, 0x66, 0xb1, 0x2d, 0x72, 0x5a, 0x81, 0xd6, 0xfb, 0x72, 0x6c, 0x2d, 0x93, 0xf3,
-	0x5b, 0x80, 0x15, 0x23, 0x58, 0x10, 0x79, 0x5e, 0xf4, 0xbd, 0x9d, 0xab, 0x40, 0xe9, 0xf9, 0xf1,
-	0x26, 0x57, 0xcb, 0x6f, 0x01, 0xf6, 0x49, 0xa0, 0xd7, 0xd5, 0x40, 0xaf, 0x6b, 0x72, 0xa5, 0xbb,
-	0x01, 0x73, 0x97, 0xff, 0xb0, 0x2e, 0xb6, 0x2b, 0x9a, 0xa5, 0xe6, 0xab, 0x96, 0x29, 0xc5, 0x1a,
-	0xde, 0xab, 0x0b, 0xa1, 0x76, 0xae, 0x7d, 0x75, 0xe7, 0x9b, 0x1e, 0xd6, 0x96, 0x5b, 0x7a, 0x64,
-	0xe7, 0x44, 0x5c, 0x58, 0x54, 0x57, 0x6f, 0xa9, 0x60, 0x6d, 0x59, 0x13, 0x9d, 0x45, 0x75, 0xf5,
-	0x96, 0x0a, 0x16, 0x96, 0x83, 0x99, 0xff, 0x2d, 0x97, 0xaf, 0x01, 0x00, 0x00, 0xff, 0xff, 0x1f,
-	0xb7, 0xd0, 0x75, 0x09, 0x04, 0x00, 0x00,
+	// 302 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x92, 0x3f, 0x4f, 0xf3, 0x30,
+	0x10, 0xc6, 0x95, 0x54, 0xea, 0xdb, 0xf7, 0x40, 0x05, 0x59, 0x02, 0x05, 0x83, 0x00, 0x75, 0x62,
+	0x4a, 0x5b, 0xba, 0xb2, 0x20, 0xca, 0xd0, 0x21, 0x4b, 0x50, 0xd9, 0x4d, 0x7d, 0x02, 0x4b, 0xd4,
+	0x09, 0xf6, 0x35, 0xa8, 0x9f, 0x90, 0xaf, 0x85, 0x92, 0x98, 0xfc, 0x41, 0x66, 0x4a, 0xfc, 0xfc,
+	0x9e, 0xfb, 0xc9, 0x39, 0x05, 0x4e, 0xf4, 0x7c, 0x41, 0x53, 0x25, 0xb7, 0xd3, 0x62, 0x56, 0x3e,
+	0xe2, 0xdc, 0x64, 0x94, 0xb1, 0x83, 0x32, 0x8e, 0xcb, 0x73, 0x31, 0xe3, 0xa7, 0xdd, 0xce, 0xce,
+	0xa2, 0xa9, 0x4b, 0x3c, 0xea, 0xe6, 0x16, 0x85, 0xd9, 0xbc, 0x39, 0x72, 0xd6, 0x25, 0x64, 0x84,
+	0xb6, 0x8a, 0x6a, 0x34, 0xb9, 0x83, 0xf1, 0xca, 0x3e, 0x8b, 0x77, 0x25, 0x53, 0xfc, 0xd8, 0xa1,
+	0x25, 0x36, 0x86, 0x50, 0xc9, 0x28, 0xb8, 0x0e, 0x6e, 0xfe, 0xa7, 0xa1, 0x92, 0x8c, 0xc3, 0x28,
+	0x17, 0xd6, 0x7e, 0x66, 0x46, 0x46, 0x61, 0x95, 0x36, 0xe7, 0xc9, 0x1c, 0x8e, 0x9a, 0x69, 0x9b,
+	0x67, 0xda, 0x22, 0x3b, 0x84, 0xa0, 0xa8, 0xa6, 0x47, 0x69, 0x50, 0xb0, 0x63, 0x18, 0xa0, 0x31,
+	0x6e, 0xae, 0x7c, 0xbd, 0xfd, 0x1a, 0x00, 0x5b, 0x49, 0xd4, 0xa4, 0x68, 0x9f, 0x08, 0x2d, 0x5e,
+	0x71, 0x8b, 0x9a, 0x58, 0x02, 0xf0, 0x60, 0x50, 0x10, 0xae, 0x2d, 0x1a, 0x76, 0x19, 0x77, 0x3e,
+	0x38, 0x6e, 0x81, 0xbb, 0x23, 0xbf, 0xfa, 0x93, 0xbb, 0x5b, 0x24, 0x00, 0xeb, 0x5c, 0xfa, 0x75,
+	0x2d, 0xf0, 0xeb, 0xba, 0xdc, 0xe9, 0xee, 0x61, 0xf8, 0x54, 0x2d, 0x94, 0xf1, 0x5e, 0xb5, 0x0e,
+	0x7f, 0x34, 0xe7, 0x5e, 0xe6, 0x14, 0x4b, 0xf8, 0xe7, 0x56, 0xc5, 0xfa, 0xbd, 0xfe, 0xfa, 0xf9,
+	0x85, 0x1f, 0xb6, 0x96, 0x47, 0xbd, 0x31, 0xfb, 0x9c, 0x7e, 0x59, 0x5c, 0xea, 0xb7, 0x34, 0xb0,
+	0xb5, 0x2c, 0xd1, 0x67, 0x71, 0xa9, 0xdf, 0xd2, 0xc0, 0xda, 0xf2, 0x32, 0xac, 0xfe, 0xa0, 0xc5,
+	0x77, 0x00, 0x00, 0x00, 0xff, 0xff, 0x0d, 0xa6, 0x9a, 0x4e, 0xb4, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -405,10 +162,6 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type IdentityManagementClient interface {
-	// Sums two integers.
-	Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumReply, error)
-	// Concatenates two strings
-	Concat(ctx context.Context, in *ConcatRequest, opts ...grpc.CallOption) (*ConcatReply, error)
 	CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error)
 	UpdateUser(ctx context.Context, in *UpdateUserRequest, opts ...grpc.CallOption) (*UpdateUserResponse, error)
 	//    rpc DeleteUser(User) returns (google.protobuf.Empty) {
@@ -430,24 +183,6 @@ type identityManagementClient struct {
 
 func NewIdentityManagementClient(cc grpc.ClientConnInterface) IdentityManagementClient {
 	return &identityManagementClient{cc}
-}
-
-func (c *identityManagementClient) Sum(ctx context.Context, in *SumRequest, opts ...grpc.CallOption) (*SumReply, error) {
-	out := new(SumReply)
-	err := c.cc.Invoke(ctx, "/n13t.idm.v0.IdentityManagement/Sum", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *identityManagementClient) Concat(ctx context.Context, in *ConcatRequest, opts ...grpc.CallOption) (*ConcatReply, error) {
-	out := new(ConcatReply)
-	err := c.cc.Invoke(ctx, "/n13t.idm.v0.IdentityManagement/Concat", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
 }
 
 func (c *identityManagementClient) CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*CreateUserResponse, error) {
@@ -506,10 +241,6 @@ func (c *identityManagementClient) Decrypt(ctx context.Context, in *DecryptReque
 
 // IdentityManagementServer is the server API for IdentityManagement service.
 type IdentityManagementServer interface {
-	// Sums two integers.
-	Sum(context.Context, *SumRequest) (*SumReply, error)
-	// Concatenates two strings
-	Concat(context.Context, *ConcatRequest) (*ConcatReply, error)
 	CreateUser(context.Context, *CreateUserRequest) (*CreateUserResponse, error)
 	UpdateUser(context.Context, *UpdateUserRequest) (*UpdateUserResponse, error)
 	//    rpc DeleteUser(User) returns (google.protobuf.Empty) {
@@ -529,12 +260,6 @@ type IdentityManagementServer interface {
 type UnimplementedIdentityManagementServer struct {
 }
 
-func (*UnimplementedIdentityManagementServer) Sum(ctx context.Context, req *SumRequest) (*SumReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Sum not implemented")
-}
-func (*UnimplementedIdentityManagementServer) Concat(ctx context.Context, req *ConcatRequest) (*ConcatReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Concat not implemented")
-}
 func (*UnimplementedIdentityManagementServer) CreateUser(ctx context.Context, req *CreateUserRequest) (*CreateUserResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateUser not implemented")
 }
@@ -556,42 +281,6 @@ func (*UnimplementedIdentityManagementServer) Decrypt(ctx context.Context, req *
 
 func RegisterIdentityManagementServer(s *grpc.Server, srv IdentityManagementServer) {
 	s.RegisterService(&_IdentityManagement_serviceDesc, srv)
-}
-
-func _IdentityManagement_Sum_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SumRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(IdentityManagementServer).Sum(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/n13t.idm.v0.IdentityManagement/Sum",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IdentityManagementServer).Sum(ctx, req.(*SumRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _IdentityManagement_Concat_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ConcatRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(IdentityManagementServer).Concat(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/n13t.idm.v0.IdentityManagement/Concat",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(IdentityManagementServer).Concat(ctx, req.(*ConcatRequest))
-	}
-	return interceptor(ctx, in, info, handler)
 }
 
 func _IdentityManagement_CreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -706,14 +395,6 @@ var _IdentityManagement_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "n13t.idm.v0.IdentityManagement",
 	HandlerType: (*IdentityManagementServer)(nil),
 	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "Sum",
-			Handler:    _IdentityManagement_Sum_Handler,
-		},
-		{
-			MethodName: "Concat",
-			Handler:    _IdentityManagement_Concat_Handler,
-		},
 		{
 			MethodName: "CreateUser",
 			Handler:    _IdentityManagement_CreateUser_Handler,

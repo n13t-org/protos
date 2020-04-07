@@ -245,31 +245,11 @@
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.ConcatReply"><span class="badge">M</span>ConcatReply</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.ConcatRequest"><span class="badge">M</span>ConcatRequest</a>
-                </li>
-              
-                <li>
                   <a href="#n13t.idm.v0.IsValidRequest"><span class="badge">M</span>IsValidRequest</a>
                 </li>
               
                 <li>
                   <a href="#n13t.idm.v0.IsValidResponse"><span class="badge">M</span>IsValidResponse</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.SumReply"><span class="badge">M</span>SumReply</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.SumRequest"><span class="badge">M</span>SumRequest</a>
                 </li>
               
               
@@ -816,68 +796,6 @@ see E.164/RFC3966 </p></td>
       <p></p>
 
       
-        <h3 id="n13t.idm.v0.ConcatReply">ConcatReply</h3>
-        <p>The Concat response contains the result of the concatenation.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.ConcatRequest">ConcatRequest</h3>
-        <p>The Concat request contains two parameters.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>a</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>b</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
         <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
         <p></p>
 
@@ -940,92 +858,6 @@ see E.164/RFC3966 </p></td>
 
         
       
-        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>search</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SumReply">SumReply</h3>
-        <p>The sum response contains the result of the calculation.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SumRequest">SumRequest</h3>
-        <p>The sum request contains two parameters.</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>a</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>b</td>
-                  <td><a href="#int64">int64</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
 
       
 
@@ -1039,20 +871,6 @@ see E.164/RFC3966 </p></td>
             <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
           </thead>
           <tbody>
-            
-              <tr>
-                <td>Sum</td>
-                <td><a href="#n13t.idm.v0.SumRequest">SumRequest</a></td>
-                <td><a href="#n13t.idm.v0.SumReply">SumReply</a></td>
-                <td><p>Sums two integers.</p></td>
-              </tr>
-            
-              <tr>
-                <td>Concat</td>
-                <td><a href="#n13t.idm.v0.ConcatRequest">ConcatRequest</a></td>
-                <td><a href="#n13t.idm.v0.ConcatReply">ConcatReply</a></td>
-                <td><p>Concatenates two strings</p></td>
-              </tr>
             
               <tr>
                 <td>CreateUser</td>
