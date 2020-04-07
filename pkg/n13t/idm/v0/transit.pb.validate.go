@@ -46,6 +46,8 @@ func (m *EncryptRequest) Validate() error {
 
 	// no validation rules for Plaintext
 
+	// no validation rules for Err
+
 	return nil
 }
 
@@ -112,6 +114,8 @@ func (m *EncryptResponse) Validate() error {
 	}
 
 	// no validation rules for Ciphertext
+
+	// no validation rules for Err
 
 	return nil
 }
@@ -180,6 +184,8 @@ func (m *DecryptRequest) Validate() error {
 
 	// no validation rules for Ciphertext
 
+	// no validation rules for Err
+
 	return nil
 }
 
@@ -246,6 +252,8 @@ func (m *DecryptResponse) Validate() error {
 	}
 
 	// no validation rules for Plaintext
+
+	// no validation rules for Err
 
 	return nil
 }
