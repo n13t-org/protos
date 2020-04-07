@@ -6,6 +6,7 @@ package n13t.idm.v0;
 //import "google/protobuf/empty.proto";
 import "n13t/idm/v0/user.proto";
 import "n13t/idm/v0/search.proto";
+import "n13t/idm/v0/transit.proto";
 
 /**
  * Identity Management Service - manage user's private information
@@ -28,6 +29,9 @@ service IdentityManagement {
 
     // for keycloak to check password
     rpc IsValid(IsValidRequest) returns (IsValidResponse);
+
+    // transit engine
+    rpc Transit(TransitData) returns (TransitData);
 }
 
 message ListUsersRequest {

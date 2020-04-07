@@ -175,15 +175,50 @@
         
           
           <li>
-            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
+            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
+                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
+                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User.Address"><span class="badge">M</span>User.Address</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.User.AttributesEntry"><span class="badge">M</span>User.AttributesEntry</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#n13t%2fidm%2fv0%2ftransit.proto">n13t/idm/v0/transit.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.TransitData"><span class="badge">M</span>TransitData</a>
                 </li>
               
               
@@ -237,35 +272,15 @@
         
           
           <li>
-            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
+            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
             <ul>
               
                 <li>
-                  <a href="#n13t.idm.v0.CreateUserRequest"><span class="badge">M</span>CreateUserRequest</a>
+                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
                 </li>
               
                 <li>
-                  <a href="#n13t.idm.v0.CreateUserResponse"><span class="badge">M</span>CreateUserResponse</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User.Address"><span class="badge">M</span>User.Address</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.User.AttributesEntry"><span class="badge">M</span>User.AttributesEntry</a>
+                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
                 </li>
               
               
@@ -281,12 +296,12 @@
     
       
       <div class="file-heading">
-        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
+        <h2 id="n13t/idm/v0/user.proto">n13t/idm/v0/user.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
+        <h3 id="n13t.idm.v0.CreateUserRequest">CreateUserRequest</h3>
         <p></p>
 
         
@@ -297,29 +312,15 @@
             <tbody>
               
                 <tr>
-                  <td>index</td>
+                  <td>user</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>password</td>
                   <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>query</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>limit</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>offset</td>
-                  <td><a href="#int32">int32</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -331,7 +332,7 @@
 
         
       
-        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
+        <h3 id="n13t.idm.v0.CreateUserResponse">CreateUserResponse</h3>
         <p></p>
 
         
@@ -342,14 +343,376 @@
             <tbody>
               
                 <tr>
-                  <td>users</td>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>user</td>
                   <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td>repeated</td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.User">User</h3>
+        <p>Represents the user</p><p>Compatible with OIDC (OpenID Connect)</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>enabled</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
-                  <td>err</td>
+                  <td>attributes</td>
+                  <td><a href="#n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</a></td>
+                  <td>repeated</td>
+                  <td><p>google.protobuf.Timestamp created_at = 101;     // ??? </p></td>
+                </tr>
+              
+                <tr>
+                  <td>sub</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
+Subject - Identifier for the End-User at the Issuer. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>End-User&#39;s full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the End-User&#39;s locale and preferences. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>given_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Given name(s) or first name(s) of the End-User. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>family_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Surname(s) or last name(s) of the End-User </p></td>
+                </tr>
+              
+                <tr>
+                  <td>middle_name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Middle name(s) of the End-User </p></td>
+                </tr>
+              
+                <tr>
+                  <td>nickname</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Casual name of the End-User </p></td>
+                </tr>
+              
+                <tr>
+                  <td>preferred_username</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe.
+This value MAY be any valid JSON string including special characters such as @, /, or whitespace (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>profile</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>URL </p></td>
+                </tr>
+              
+                <tr>
+                  <td>picture</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>URL </p></td>
+                </tr>
+              
+                <tr>
+                  <td>website</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>URL </p></td>
+                </tr>
+              
+                <tr>
+                  <td>email</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>RFC5322  (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>email_verified</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>gender</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>male | female </p></td>
+                </tr>
+              
+                <tr>
+                  <td>birthdate</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>ISO 8601:2004 YYYY-MM-DD format. The year MAY be 0000, indicating that it is omitted. To represent only the year, YYYY format is allowed. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>zoneinfo</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>String from zoneinfo time zone database (the tz database) representing the End-User&#39;s time zone. For example, Europe/Paris or America/Los_Angeles. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>locale</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>End-User&#39;s locale, represented as a BCP47 [RFC5646] language tag.
+This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA.
+As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>phone_number</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Ex: &#43;1 (425) 555-1212 or &#43;56 (2) 687 2400   (E.164)
+ or &#43;1 (604) 555-1234;ext=5678              (RFC3966)
+see E.164/RFC3966 </p></td>
+                </tr>
+              
+                <tr>
+                  <td>phone_number_verified</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>true if phone number is verified by issuer, default is false. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>address</td>
+                  <td><a href="#n13t.idm.v0.User.Address">User.Address</a></td>
+                  <td></td>
+                  <td><p>End-User&#39;s address </p></td>
+                </tr>
+              
+                <tr>
+                  <td>updated_at</td>
+                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
+                  <td></td>
+                  <td><p>custom fields
+
+1970-01-01T00:00:00Z </p></td>
+                </tr>
+              
+                <tr>
+                  <td>username</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.User.Address">User.Address</h3>
+        <p>https://openid.net/specs/openid-connect-core-1_0.html#AddressClaim</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>formatted</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&#34;\r\n&#34;) or as a single line feed character (&#34;\n&#34;). </p></td>
+                </tr>
+              
+                <tr>
+                  <td>street_address</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Full street address component, which MAY include house number, street name, Post Office Box, and multi-line extended street address information. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&#34;\r\n&#34;) or as a single line feed character (&#34;\n&#34;). </p></td>
+                </tr>
+              
+                <tr>
+                  <td>locality</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>City or locality component. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>region</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>State, province, prefecture, or region component. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>postal_code</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Zip code or postal code component. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>country</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Country name component. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>key</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value</td>
+                  <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/transit.proto">n13t/idm/v0/transit.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.TransitData">TransitData</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>plaintext</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>ciphertext</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
@@ -646,6 +1009,13 @@
                 <td><p>for keycloak to check password</p></td>
               </tr>
             
+              <tr>
+                <td>Transit</td>
+                <td><a href="#n13t.idm.v0.TransitData">TransitData</a></td>
+                <td><a href="#n13t.idm.v0.TransitData">TransitData</a></td>
+                <td><p>transit engine</p></td>
+              </tr>
+            
           </tbody>
         </table>
 
@@ -653,12 +1023,12 @@
     
       
       <div class="file-heading">
-        <h2 id="n13t/idm/v0/user.proto">n13t/idm/v0/user.proto</h2><a href="#title">Top</a>
+        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="n13t.idm.v0.CreateUserRequest">CreateUserRequest</h3>
+        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
         <p></p>
 
         
@@ -669,370 +1039,60 @@
             <tbody>
               
                 <tr>
-                  <td>user</td>
+                  <td>index</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>query</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>limit</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>offset</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>users</td>
                   <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>password</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.CreateUserResponse">CreateUserResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>user</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.User">User</h3>
-        <p>Represents the user</p><p>Compatible with OIDC (OpenID Connect)</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>enabled</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>attributes</td>
-                  <td><a href="#n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</a></td>
                   <td>repeated</td>
-                  <td><p>google.protobuf.Timestamp created_at = 101;     // ??? </p></td>
-                </tr>
-              
-                <tr>
-                  <td>sub</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
-Subject - Identifier for the End-User at the Issuer. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>End-User&#39;s full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the End-User&#39;s locale and preferences. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>given_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Given name(s) or first name(s) of the End-User. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>family_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Surname(s) or last name(s) of the End-User </p></td>
-                </tr>
-              
-                <tr>
-                  <td>middle_name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Middle name(s) of the End-User </p></td>
-                </tr>
-              
-                <tr>
-                  <td>nickname</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Casual name of the End-User </p></td>
-                </tr>
-              
-                <tr>
-                  <td>preferred_username</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Shorthand name by which the End-User wishes to be referred to at the RP, such as janedoe or j.doe.
-This value MAY be any valid JSON string including special characters such as @, /, or whitespace (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability) </p></td>
-                </tr>
-              
-                <tr>
-                  <td>profile</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>URL </p></td>
-                </tr>
-              
-                <tr>
-                  <td>picture</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>URL </p></td>
-                </tr>
-              
-                <tr>
-                  <td>website</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>URL </p></td>
-                </tr>
-              
-                <tr>
-                  <td>email</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>RFC5322  (not unique!, see https://openid.net/specs/openid-connect-basic-1_0.html#ClaimStability) </p></td>
-                </tr>
-              
-                <tr>
-                  <td>email_verified</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
-                  <td>gender</td>
+                  <td>err</td>
                   <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>male | female </p></td>
-                </tr>
-              
-                <tr>
-                  <td>birthdate</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>ISO 8601:2004 YYYY-MM-DD format. The year MAY be 0000, indicating that it is omitted. To represent only the year, YYYY format is allowed. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>zoneinfo</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>String from zoneinfo time zone database (the tz database) representing the End-User&#39;s time zone. For example, Europe/Paris or America/Los_Angeles. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>locale</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>End-User&#39;s locale, represented as a BCP47 [RFC5646] language tag.
-This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash. For example, en-US or fr-CA.
-As a compatibility note, some implementations have used an underscore as the separator rather than a dash, for example, en_US; Relying Parties MAY choose to accept this locale syntax as well. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>phone_number</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Ex: &#43;1 (425) 555-1212 or &#43;56 (2) 687 2400   (E.164)
- or &#43;1 (604) 555-1234;ext=5678              (RFC3966)
-see E.164/RFC3966 </p></td>
-                </tr>
-              
-                <tr>
-                  <td>phone_number_verified</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p>true if phone number is verified by issuer, default is false. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>address</td>
-                  <td><a href="#n13t.idm.v0.User.Address">User.Address</a></td>
-                  <td></td>
-                  <td><p>End-User&#39;s address </p></td>
-                </tr>
-              
-                <tr>
-                  <td>updated_at</td>
-                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
-                  <td></td>
-                  <td><p>custom fields
-
-1970-01-01T00:00:00Z </p></td>
-                </tr>
-              
-                <tr>
-                  <td>username</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>password</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.User.Address">User.Address</h3>
-        <p>https://openid.net/specs/openid-connect-core-1_0.html#AddressClaim</p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>formatted</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&#34;\r\n&#34;) or as a single line feed character (&#34;\n&#34;). </p></td>
-                </tr>
-              
-                <tr>
-                  <td>street_address</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Full street address component, which MAY include house number, street name, Post Office Box, and multi-line extended street address information. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&#34;\r\n&#34;) or as a single line feed character (&#34;\n&#34;). </p></td>
-                </tr>
-              
-                <tr>
-                  <td>locality</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>City or locality component. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>region</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>State, province, prefecture, or region component. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>postal_code</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Zip code or postal code component. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>country</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Country name component. </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>key</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>value</td>
-                  <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

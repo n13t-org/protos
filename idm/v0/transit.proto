@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package n13t.idm.v0;
+
+message TransitData {
+  string plaintext = 1;
+  string ciphertext = 2;
+}
