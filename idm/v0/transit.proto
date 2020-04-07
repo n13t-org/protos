@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package n13t.idm.v0;
 
+// Encryption
 message EncryptRequest {
   string plaintext = 1;
-  string err = 2;
 }
 
 message EncryptResponse {
@@ -12,9 +12,9 @@ message EncryptResponse {
   string err = 2;
 }
 
+// Decryption
 message DecryptRequest {
   string ciphertext = 1;
-  string err = 2;
 }
 
 message DecryptResponse {
