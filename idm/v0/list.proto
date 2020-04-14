@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package n13t.idm.v0;
+
+import "n13t/idm/v0/user.proto";
+
+message ListUsersRequest {
+    // Optional. The maximum number of Users to return in the response.
+    int32 page_size = 2;
+
+    // Optional. A pagination token returned from a previous call to `ListUsers`
+    // that indicates where this listing should continue from.
+    string page_token = 3;
+}
+
+message ListUsersResponse {
+    repeated User users = 1;
+
+    // A pagination token returned from a previous call to `ListUsers`
+    // that indicates from where listing should continue.
+    string next_page_token = 2;
+}

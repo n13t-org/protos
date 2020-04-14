@@ -241,6 +241,25 @@
         
           
           <li>
+            <a href="#n13t%2fidm%2fv0%2flist.proto">n13t/idm/v0/list.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.ListUsersResponse"><span class="badge">M</span>ListUsersResponse</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#n13t%2fidm%2fv0%2fidm.proto">n13t/idm/v0/idm.proto</a>
             <ul>
               
@@ -805,6 +824,84 @@ see E.164/RFC3966 </p></td>
     
       
       <div class="file-heading">
+        <h2 id="n13t/idm/v0/list.proto">n13t/idm/v0/list.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>page_size</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>Optional. The maximum number of Users to return in the response. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>page_token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Optional. A pagination token returned from a previous call to `ListUsers`
+that indicates where this listing should continue from. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.ListUsersResponse">ListUsersResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>users</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>next_page_token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A pagination token returned from a previous call to `ListUsers`
+that indicates from where listing should continue. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
         <h2 id="n13t/idm/v0/idm.proto">n13t/idm/v0/idm.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
@@ -909,6 +1006,13 @@ see E.164/RFC3966 </p></td>
 			delete: &#34;/v0/users/{sub}&#34;
 		};
    }</p></td>
+              </tr>
+            
+              <tr>
+                <td>ListUsers</td>
+                <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
+                <td><a href="#n13t.idm.v0.ListUsersResponse">ListUsersResponse</a></td>
+                <td><p></p></td>
               </tr>
             
               <tr>

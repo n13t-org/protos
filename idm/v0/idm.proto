@@ -6,6 +6,7 @@ package n13t.idm.v0;
 //import "google/protobuf/empty.proto";
 import "n13t/idm/v0/user.proto";
 import "n13t/idm/v0/search.proto";
+import "n13t/idm/v0/list.proto";
 import "n13t/idm/v0/transit.proto";
 
 /**
@@ -20,6 +21,7 @@ service IdentityManagement {
 //		};
 //    }
     rpc Search(SearchRequest) returns (SearchResponse);
+    rpc ListUsers(ListUsersRequest) returns (ListUsersResponse);
 
     // for keycloak to check password
     rpc IsValid(IsValidRequest) returns (IsValidResponse);
