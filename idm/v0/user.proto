@@ -13,8 +13,6 @@ import "validate/validate.proto";
  */
 message User {
     bool enabled = 9;
-    //    google.protobuf.Timestamp created_at = 101;     // ???
-    map<string, google.protobuf.Any> attributes = 100;
 
     // OpenId Standard Claims Members (https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
     // Subject - Identifier for the End-User at the Issuer.
@@ -94,23 +92,9 @@ message User {
     Address address = 42;           // End-User's address
 
     // custom fields
-    google.protobuf.Timestamp updated_at = 102 [(validate.rules).timestamp.required = true];     // 1970-01-01T00:00:00Z
+    map<string, google.protobuf.Any> attributes = 100;
+    google.protobuf.Timestamp created_at = 101  [(validate.rules).timestamp.required = true];     // 1970-01-01T00:00:00Z
+    google.protobuf.Timestamp updated_at = 102  [(validate.rules).timestamp.required = true];     // 1970-01-01T00:00:00Z
     string username = 200;
-}
-
-message CreateUserRequest {
-    User user = 1;
-    string password = 2;
-}
-
-message CreateUserResponse {
-    string err = 10;
-}
-
-message UpdateUserRequest {
-    User user = 1;
-}
-
-message UpdateUserResponse {
-    string err = 10;
+    string password = 201;
 }

@@ -175,7 +175,26 @@
         
           
           <li>
-            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
+            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#n13t%2fidm%2fv0%2fidm.proto">n13t/idm/v0/idm.proto</a>
             <ul>
               
                 <li>
@@ -187,12 +206,35 @@
                 </li>
               
                 <li>
+                  <a href="#n13t.idm.v0.IsValidRequest"><span class="badge">M</span>IsValidRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.IsValidResponse"><span class="badge">M</span>IsValidResponse</a>
+                </li>
+              
+                <li>
                   <a href="#n13t.idm.v0.UpdateUserRequest"><span class="badge">M</span>UpdateUserRequest</a>
                 </li>
               
                 <li>
                   <a href="#n13t.idm.v0.UpdateUserResponse"><span class="badge">M</span>UpdateUserResponse</a>
                 </li>
+              
+              
+              
+              
+                <li>
+                  <a href="#n13t.idm.v0.IdentityManagement"><span class="badge">S</span>IdentityManagement</a>
+                </li>
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#n13t%2fidm%2fv0%2fuser.proto">n13t/idm/v0/user.proto</a>
+            <ul>
               
                 <li>
                   <a href="#n13t.idm.v0.User"><span class="badge">M</span>User</a>
@@ -204,6 +246,25 @@
               
                 <li>
                   <a href="#n13t.idm.v0.User.AttributesEntry"><span class="badge">M</span>User.AttributesEntry</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#n13t%2fidm%2fv0%2flist.proto">n13t/idm/v0/list.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
+                </li>
+              
+                <li>
+                  <a href="#n13t.idm.v0.ListUsersResponse"><span class="badge">M</span>ListUsersResponse</a>
                 </li>
               
               
@@ -239,67 +300,6 @@
             </ul>
           </li>
         
-          
-          <li>
-            <a href="#n13t%2fidm%2fv0%2flist.proto">n13t/idm/v0/list.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#n13t.idm.v0.ListUsersRequest"><span class="badge">M</span>ListUsersRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.ListUsersResponse"><span class="badge">M</span>ListUsersResponse</a>
-                </li>
-              
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#n13t%2fidm%2fv0%2fidm.proto">n13t/idm/v0/idm.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#n13t.idm.v0.IsValidRequest"><span class="badge">M</span>IsValidRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.IsValidResponse"><span class="badge">M</span>IsValidResponse</a>
-                </li>
-              
-              
-              
-              
-                <li>
-                  <a href="#n13t.idm.v0.IdentityManagement"><span class="badge">S</span>IdentityManagement</a>
-                </li>
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#n13t%2fidm%2fv0%2fsearch.proto">n13t/idm/v0/search.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#n13t.idm.v0.SearchRequest"><span class="badge">M</span>SearchRequest</a>
-                </li>
-              
-                <li>
-                  <a href="#n13t.idm.v0.SearchResponse"><span class="badge">M</span>SearchResponse</a>
-                </li>
-              
-              
-              
-              
-            </ul>
-          </li>
-        
         <li><a href="#scalar-value-types">Scalar Value Types</a></li>
       </ul>
     </div>
@@ -307,13 +307,103 @@
     
       
       <div class="file-heading">
-        <h2 id="n13t/idm/v0/user.proto">n13t/idm/v0/user.proto</h2><a href="#title">Top</a>
+        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>index</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>query</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>limit</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>offset</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>users</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/idm.proto">n13t/idm/v0/idm.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
         <h3 id="n13t.idm.v0.CreateUserRequest">CreateUserRequest</h3>
-        <p></p>
+        <p>Create</p>
 
         
           <table class="field-table">
@@ -333,12 +423,33 @@
                   <td>password</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p> </p></td>
+                  <td><p>Use User.password instead </p></td>
                 </tr>
               
             </tbody>
           </table>
 
+          
+            
+            
+            <h4>Fields with deprecated option</h4>
+            <table>
+              <thead>
+                <tr>
+                  <td>Name</td>
+                  <td>Option</td>
+                </tr>
+              </thead>
+              <tbody>
+              
+                <tr>
+                  <td>password</td>
+                  <td><p>true</p></td>
+                </tr>
+              
+              </tbody>
+            </table>
+            
           
 
         
@@ -367,8 +478,70 @@
 
         
       
-        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
+        <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
         <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>password</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.IsValidResponse">IsValidResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</h3>
+        <p>Update</p>
 
         
           <table class="field-table">
@@ -415,6 +588,85 @@
 
         
       
+
+      
+
+      
+
+      
+        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
+        <p>Identity Management Service - manage user's private information</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>CreateUser</td>
+                <td><a href="#n13t.idm.v0.CreateUserRequest">CreateUserRequest</a></td>
+                <td><a href="#n13t.idm.v0.CreateUserResponse">CreateUserResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>UpdateUser</td>
+                <td><a href="#n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</a></td>
+                <td><a href="#n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>Search</td>
+                <td><a href="#n13t.idm.v0.SearchRequest">SearchRequest</a></td>
+                <td><a href="#n13t.idm.v0.SearchResponse">SearchResponse</a></td>
+                <td><p>rpc DeleteUser(User) returns (google.protobuf.Empty) {
+       option (google.api.http) = {
+			delete: &#34;/v0/users/{sub}&#34;
+		};
+   }</p></td>
+              </tr>
+            
+              <tr>
+                <td>ListUsers</td>
+                <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
+                <td><a href="#n13t.idm.v0.ListUsersResponse">ListUsersResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>IsValid</td>
+                <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
+                <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
+                <td><p>for keycloak to check password</p></td>
+              </tr>
+            
+              <tr>
+                <td>Encrypt</td>
+                <td><a href="#n13t.idm.v0.EncryptRequest">EncryptRequest</a></td>
+                <td><a href="#n13t.idm.v0.EncryptResponse">EncryptResponse</a></td>
+                <td><p>transit engine</p></td>
+              </tr>
+            
+              <tr>
+                <td>Decrypt</td>
+                <td><a href="#n13t.idm.v0.DecryptRequest">DecryptRequest</a></td>
+                <td><a href="#n13t.idm.v0.DecryptResponse">DecryptResponse</a></td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+
+        
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/user.proto">n13t/idm/v0/user.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
         <h3 id="n13t.idm.v0.User">User</h3>
         <p>Represents the user</p><p>Compatible with OIDC (OpenID Connect)</p>
 
@@ -430,13 +682,6 @@
                   <td><a href="#bool">bool</a></td>
                   <td></td>
                   <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>attributes</td>
-                  <td><a href="#n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</a></td>
-                  <td>repeated</td>
-                  <td><p>google.protobuf.Timestamp created_at = 101;     // ??? </p></td>
                 </tr>
               
                 <tr>
@@ -579,16 +824,35 @@ see E.164/RFC3966 </p></td>
                 </tr>
               
                 <tr>
+                  <td>attributes</td>
+                  <td><a href="#n13t.idm.v0.User.AttributesEntry">User.AttributesEntry</a></td>
+                  <td>repeated</td>
+                  <td><p>custom fields </p></td>
+                </tr>
+              
+                <tr>
+                  <td>created_at</td>
+                  <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
+                  <td></td>
+                  <td><p>1970-01-01T00:00:00Z </p></td>
+                </tr>
+              
+                <tr>
                   <td>updated_at</td>
                   <td><a href="#google.protobuf.Timestamp">google.protobuf.Timestamp</a></td>
                   <td></td>
-                  <td><p>custom fields
-
-1970-01-01T00:00:00Z </p></td>
+                  <td><p>1970-01-01T00:00:00Z </p></td>
                 </tr>
               
                 <tr>
                   <td>username</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>password</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
@@ -680,6 +944,91 @@ see E.164/RFC3966 </p></td>
                 <tr>
                   <td>value</td>
                   <td><a href="#google.protobuf.Any">google.protobuf.Any</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="n13t/idm/v0/list.proto">n13t/idm/v0/list.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>page_size</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>Optional. The maximum number of Users to return in the response. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>page_token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Optional. A pagination token returned from a previous call to `ListUsers`
+that indicates where this listing should continue from. </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id="n13t.idm.v0.ListUsersResponse">ListUsersResponse</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>users</td>
+                  <td><a href="#n13t.idm.v0.User">User</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>next_page_token</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>A pagination token returned from a previous call to `ListUsers`
+that indicates from where listing should continue. </p></td>
+                </tr>
+              
+                <tr>
+                  <td>err</td>
+                  <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -798,322 +1147,6 @@ see E.164/RFC3966 </p></td>
                   <td>ciphertext</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="n13t/idm/v0/list.proto">n13t/idm/v0/list.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.ListUsersRequest">ListUsersRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>page_size</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p>Optional. The maximum number of Users to return in the response. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>page_token</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>Optional. A pagination token returned from a previous call to `ListUsers`
-that indicates where this listing should continue from. </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.ListUsersResponse">ListUsersResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>users</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>next_page_token</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p>A pagination token returned from a previous call to `ListUsers`
-that indicates from where listing should continue. </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="n13t/idm/v0/idm.proto">n13t/idm/v0/idm.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.IsValidRequest">IsValidRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>id</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>password</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.IsValidResponse">IsValidResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v</td>
-                  <td><a href="#bool">bool</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>err</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-        <h3 id="n13t.idm.v0.IdentityManagement">IdentityManagement</h3>
-        <p>Identity Management Service - manage user's private information</p>
-        <table class="enum-table">
-          <thead>
-            <tr><td>Method Name</td><td>Request Type</td><td>Response Type</td><td>Description</td></tr>
-          </thead>
-          <tbody>
-            
-              <tr>
-                <td>CreateUser</td>
-                <td><a href="#n13t.idm.v0.CreateUserRequest">CreateUserRequest</a></td>
-                <td><a href="#n13t.idm.v0.CreateUserResponse">CreateUserResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>UpdateUser</td>
-                <td><a href="#n13t.idm.v0.UpdateUserRequest">UpdateUserRequest</a></td>
-                <td><a href="#n13t.idm.v0.UpdateUserResponse">UpdateUserResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>Search</td>
-                <td><a href="#n13t.idm.v0.SearchRequest">SearchRequest</a></td>
-                <td><a href="#n13t.idm.v0.SearchResponse">SearchResponse</a></td>
-                <td><p>rpc DeleteUser(User) returns (google.protobuf.Empty) {
-       option (google.api.http) = {
-			delete: &#34;/v0/users/{sub}&#34;
-		};
-   }</p></td>
-              </tr>
-            
-              <tr>
-                <td>ListUsers</td>
-                <td><a href="#n13t.idm.v0.ListUsersRequest">ListUsersRequest</a></td>
-                <td><a href="#n13t.idm.v0.ListUsersResponse">ListUsersResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-              <tr>
-                <td>IsValid</td>
-                <td><a href="#n13t.idm.v0.IsValidRequest">IsValidRequest</a></td>
-                <td><a href="#n13t.idm.v0.IsValidResponse">IsValidResponse</a></td>
-                <td><p>for keycloak to check password</p></td>
-              </tr>
-            
-              <tr>
-                <td>Encrypt</td>
-                <td><a href="#n13t.idm.v0.EncryptRequest">EncryptRequest</a></td>
-                <td><a href="#n13t.idm.v0.EncryptResponse">EncryptResponse</a></td>
-                <td><p>transit engine</p></td>
-              </tr>
-            
-              <tr>
-                <td>Decrypt</td>
-                <td><a href="#n13t.idm.v0.DecryptRequest">DecryptRequest</a></td>
-                <td><a href="#n13t.idm.v0.DecryptResponse">DecryptResponse</a></td>
-                <td><p></p></td>
-              </tr>
-            
-          </tbody>
-        </table>
-
-        
-    
-      
-      <div class="file-heading">
-        <h2 id="n13t/idm/v0/search.proto">n13t/idm/v0/search.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="n13t.idm.v0.SearchRequest">SearchRequest</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>index</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>query</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>limit</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>offset</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-        <h3 id="n13t.idm.v0.SearchResponse">SearchResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>users</td>
-                  <td><a href="#n13t.idm.v0.User">User</a></td>
-                  <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
               

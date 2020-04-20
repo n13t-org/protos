@@ -41,3 +41,22 @@ message IsValidResponse {
     bool v = 1;
     string err = 2;
 }
+
+// Create
+message CreateUserRequest {
+    User user = 1;
+    string password = 2 [deprecated=true];  // Use User.password instead
+}
+
+message CreateUserResponse {
+    string err = 10;
+}
+
+// Update
+message UpdateUserRequest {
+    User user = 1;
+}
+
+message UpdateUserResponse {
+    string err = 10;
+}
