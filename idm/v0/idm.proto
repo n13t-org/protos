@@ -15,11 +15,7 @@ import "n13t/idm/v0/transit.proto";
 service IdentityManagement {
     rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
     rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
-//    rpc DeleteUser(User) returns (google.protobuf.Empty) {
-//        option (google.api.http) = {
-//			delete: "/v0/users/{sub}"
-//		};
-//    }
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
     rpc Search(SearchRequest) returns (SearchResponse);
     rpc ListUsers(ListUsersRequest) returns (ListUsersResponse);
 
@@ -59,4 +55,12 @@ message UpdateUserRequest {
 
 message UpdateUserResponse {
     string err = 10;
+}
+
+message DeleteUserRequest {
+    string id = 1;
+}
+
+message DeleteUserResponse {
+    string err = 1;
 }
